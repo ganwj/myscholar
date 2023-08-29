@@ -4,19 +4,59 @@
 	import '../app.postcss';
 	import { Alert } from 'flowbite-svelte';
 	import { Icon } from 'flowbite-svelte-icons';
+	import '$lib/firebase/firebase.client';
+	import authStore from '$lib/stores/auth.store';
+	import { onMount } from 'svelte';
+	import { sendJWTToken } from '$lib/firebase/auth.client';
+
+	export let data;
+	let isLoggedIn = data.isLoggedIn;
+
+	$: isLoggedIn = $authStore.isActive ? $authStore.isLoggedin : data.isLoggedIn;
+
+	/**
+	 * @type {string | number | NodeJS.Timeout | undefined}
+	 */
+	let timerId;
+
+	async function sendServerToken() {
+		try {
+			await sendJWTToken();
+		} catch (error) {
+			console.log(error);
+			clearInterval(timerId);
+			messagesStore.showError();
+		}
+	}
+
+	onMount(async () => {
+		try {
+			await sendServerToken();
+			timerId = setInterval(async () => {
+				await sendServerToken();
+			}, 1000 * 10 * 60);
+		} catch (error) {
+			console.log(error);
+			messagesStore.showError();
+		}
+	});
+
+	function closeMessage() {
+		messagesStore.hide();
+	}
 </script>
 
-<Nav />
-<div class="container">
+<Nav {isLoggedIn} />
+<div class="container mx-auto px-4">
 	{#if $messagesStore.show}
 		{#if $messagesStore.type === 'error'}
-			<Alert class="mt-4" color="red" dismissable>
+			<Alert class="mt-4" color="red" dismissable on:close={closeMessage}>
 				<Icon name="exclamation-circle-solid" slot="icon" class="w-4 h-4" />
 				<span class="font-medium">Error: </span>
 				{$messagesStore.message}
 			</Alert>
 		{:else if $messagesStore.type === 'success'}
-			<Alert class="mt-4" color="green" dismissable>
+			<Alert class="mt-4" color="green" dismissable on:close={closeMessage}>
 				<Icon name="check-circle-solid" slot="icon" class="w-4 h-4" />
 				<span class="font-medium">Success: </span>
 				{$messagesStore.message}

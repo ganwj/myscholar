@@ -1,12 +1,24 @@
 <script>
+	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import { logout } from '$lib/firebase/auth.client';
+	import messagesStore from '$lib/stores/messages.store';
 	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
 	$: activeUrl = $page.url.pathname;
 	let activeClass =
 		'text-white bg-primary-700 md:bg-transparent md:text-primary-700 md:dark:text-white dark:bg-primary-600 md:dark:bg-transparent';
 	let nonActiveClass =
 		'text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent';
-	let isLoggedIn = false;
+	export let isLoggedIn = false;
+
+	async function onLogOut() {
+		try {
+			await logout();
+			goto('/');
+		} catch (error) {
+			messagesStore.showError();
+		}
+	}
 </script>
 
 <Navbar let:hidden let:toggle color="light">
@@ -22,7 +34,7 @@
 			<NavLi href="/">Home</NavLi>
 			<NavLi href="/profile">Profile</NavLi>
 			<NavLi href="/profile/scholarships">My Scholarships</NavLi>
-			<NavLi>Log out</NavLi>
+			<NavLi class="cursor-pointer" on:click={onLogOut}>Log out</NavLi>
 		</NavUl>
 	{:else}
 		<NavUl {activeUrl} {hidden} {activeClass} {nonActiveClass}>
