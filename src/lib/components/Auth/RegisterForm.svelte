@@ -17,11 +17,11 @@
 				<h3 class="text-xl font-medium text-gray-900 dark:text-white p-0">Sign Up</h3>
 				<Label class="space-y-2">
 					<span>Email</span>
-					<Input type="email" name="email" placeholder="Email Address" required />
+					<Input type="email" name="email" placeholder="name@domain.com" required />
 				</Label>
 				<Label class="space-y-2">
 					<span>Password</span>
-					<Input type="password" name="password" placeholder="Create Password" required />
+					<Input type="password" name="password" placeholder="*****" required />
 				</Label>
 				<Button size="sm" type="submit" class="w-full1">Sign Up</Button>
 				<LoginWithGoogle option="Sign Up" />
@@ -29,7 +29,7 @@
 					Already have an account?
 					<a
 						href="/login"
-						class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign In.</a
+						class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign In</a
 					>
 				</p>
 			</form>

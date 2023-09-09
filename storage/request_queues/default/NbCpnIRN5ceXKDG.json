@@ -1,0 +1,9 @@
+{
+	"id": "NbCpnIRN5ceXKDG",
+	"json": "{\"id\":\"NbCpnIRN5ceXKDG\",\"url\":\"https://unienrol.com/scholarships/details/7ab9f2/aimst-top-achievers-scholarship-foundation\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/7ab9f2/aimst-top-achievers-scholarship-foundation\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"AIMST University\",\"country\":\"Malaysia\",\"type\":[\"MERIT\"],\"coverage\":[\"Tuition Fee\",\"Resource Fee\",\"PTPTN Compatible\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/7ab9f2/aimst-top-achievers-scholarship-foundation\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262968115,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/7ab9f2/aimst-top-achievers-scholarship-foundation",
+	"url": "https://unienrol.com/scholarships/details/7ab9f2/aimst-top-achievers-scholarship-foundation"
+}

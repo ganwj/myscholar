@@ -8,6 +8,7 @@
 	import authStore from '$lib/stores/auth.store';
 	import { onMount } from 'svelte';
 	import { sendJWTToken } from '$lib/firebase/auth.client';
+	import '../app.css';
 
 	export let data;
 	let isLoggedIn = data.isLoggedIn;

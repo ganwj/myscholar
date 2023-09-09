@@ -1,0 +1,9 @@
+{
+	"id": "qZe3WROdzQsLmUS",
+	"json": "{\"id\":\"qZe3WROdzQsLmUS\",\"url\":\"https://unienrol.com/scholarships/details/461ef4/aimst-bursary-for-bachelor-of-computer-science\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/461ef4/aimst-bursary-for-bachelor-of-computer-science\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"AIMST University\",\"country\":\"Malaysia\",\"type\":[\"OTHERS\",\"FORECAST RESULTS\"],\"coverage\":[\"Tuition Fee\",\"Resource Fee\",\"PTPTN Compatible\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/461ef4/aimst-bursary-for-bachelor-of-computer-science\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262968154,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/461ef4/aimst-bursary-for-bachelor-of-computer-science",
+	"url": "https://unienrol.com/scholarships/details/461ef4/aimst-bursary-for-bachelor-of-computer-science"
+}

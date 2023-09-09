@@ -1,0 +1,9 @@
+{
+	"id": "GoXZ3eZBwAii6NL",
+	"json": "{\"id\":\"GoXZ3eZBwAii6NL\",\"url\":\"https://unienrol.com/scholarships/details/7f6063/disted-bursary-award\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/7f6063/disted-bursary-award\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"DISTED College\",\"country\":\"Malaysia\",\"type\":[\"OTHERS\",\"FORECAST RESULTS\"],\"coverage\":[\"Tuition Fee\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/7f6063/disted-bursary-award\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262981718,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/7f6063/disted-bursary-award",
+	"url": "https://unienrol.com/scholarships/details/7f6063/disted-bursary-award"
+}

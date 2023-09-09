@@ -1,0 +1,9 @@
+{
+	"id": "hoZbcVDtm0HTvzu",
+	"json": "{\"id\":\"hoZbcVDtm0HTvzu\",\"url\":\"https://unienrol.com/scholarships/forward-college\",\"loadedUrl\":\"https://unienrol.com/scholarships/forward-college\",\"uniqueKey\":\"https://unienrol.com/scholarships/forward-college\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-09-09T12:36:24.362Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/forward-college",
+	"url": "https://unienrol.com/scholarships/forward-college"
+}

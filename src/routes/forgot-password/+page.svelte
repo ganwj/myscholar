@@ -41,7 +41,7 @@
 				<span>Email</span>
 				<Input type="email" name="email" placeholder="Email Address" required />
 			</Label>
-			<Button size="sm" type="submit" class="w-full">Send Reset Link</Button>
+			<Button size="sm" type="submit" class="w-full">Send Password Reset Link</Button>
 		</form>
 	</Card>
 {/if}

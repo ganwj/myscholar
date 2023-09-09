@@ -1,0 +1,9 @@
+{
+	"id": "p9IXlFr3rSWUluW",
+	"json": "{\"id\":\"p9IXlFr3rSWUluW\",\"url\":\"https://unienrol.com/scholarships/details/5b71b7/first-city-uc-merit-scholarship-degree\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/5b71b7/first-city-uc-merit-scholarship-degree\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"First City University College\",\"country\":\"Malaysia\",\"type\":[\"MERIT\"],\"coverage\":[\"Tuition Fee\",\"PTPTN Compatible\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/5b71b7/first-city-uc-merit-scholarship-degree\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262984349,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/5b71b7/first-city-uc-merit-scholarship-degree",
+	"url": "https://unienrol.com/scholarships/details/5b71b7/first-city-uc-merit-scholarship-degree"
+}

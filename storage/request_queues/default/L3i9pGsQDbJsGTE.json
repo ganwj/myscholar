@@ -1,0 +1,9 @@
+{
+	"id": "L3i9pGsQDbJsGTE",
+	"json": "{\"id\":\"L3i9pGsQDbJsGTE\",\"url\":\"https://unienrol.com/scholarships/details/40f4b2/hcuc-chancellor-scholarship-uec-foundation\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/40f4b2/hcuc-chancellor-scholarship-uec-foundation\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"Han Chiang University College of Communication\",\"country\":\"Malaysia\",\"type\":[\"MERIT\"],\"coverage\":[\"Tuition Fee\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/40f4b2/hcuc-chancellor-scholarship-uec-foundation\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262985384,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/40f4b2/hcuc-chancellor-scholarship-uec-foundation",
+	"url": "https://unienrol.com/scholarships/details/40f4b2/hcuc-chancellor-scholarship-uec-foundation"
+}

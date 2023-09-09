@@ -10,7 +10,8 @@ import {
 
 export async function loginWithGoogle() {
 	const auth = getAuth();
-	const userCredential = await signInWithPopup(auth, new GoogleAuthProvider());
+	const provider = new GoogleAuthProvider();
+	const userCredential = await signInWithPopup(auth, provider);
 	return userCredential.user;
 }
 

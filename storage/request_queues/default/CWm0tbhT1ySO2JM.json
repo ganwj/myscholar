@@ -1,0 +1,9 @@
+{
+	"id": "CWm0tbhT1ySO2JM",
+	"json": "{\"id\":\"CWm0tbhT1ySO2JM\",\"url\":\"https://unienrol.com/scholarships/details/484913/disted-excellence-scholarship\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/484913/disted-excellence-scholarship\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"DISTED College\",\"country\":\"Malaysia\",\"type\":[\"TALENT AND LEADERSHIP\"],\"coverage\":[\"Tuition Fee\",\"PTPTN Compatible\"],\"interview\":\"yes\",\"instant_approval\":\"no\",\"url\":\"https://unienrol.com/scholarships/details/484913/disted-excellence-scholarship\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262981728,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/484913/disted-excellence-scholarship",
+	"url": "https://unienrol.com/scholarships/details/484913/disted-excellence-scholarship"
+}

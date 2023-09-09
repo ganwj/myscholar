@@ -1,0 +1,9 @@
+{
+	"id": "S9NDgAQ1JbOQ1C0",
+	"json": "{\"id\":\"S9NDgAQ1JbOQ1C0\",\"url\":\"https://unienrol.com/scholarships/de-montfort-university\",\"loadedUrl\":\"https://unienrol.com/scholarships/de-montfort-university\",\"uniqueKey\":\"https://unienrol.com/scholarships/de-montfort-university\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-09-09T12:36:21.781Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/de-montfort-university",
+	"url": "https://unienrol.com/scholarships/de-montfort-university"
+}

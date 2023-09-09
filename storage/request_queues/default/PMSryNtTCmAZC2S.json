@@ -1,0 +1,9 @@
+{
+	"id": "PMSryNtTCmAZC2S",
+	"json": "{\"id\":\"PMSryNtTCmAZC2S\",\"url\":\"https://unienrol.com/scholarships/university-of-new-south-wales-unsw-\",\"uniqueKey\":\"https://unienrol.com/scholarships/university-of-new-south-wales-unsw-\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262964991,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/university-of-new-south-wales-unsw-",
+	"url": "https://unienrol.com/scholarships/university-of-new-south-wales-unsw-"
+}

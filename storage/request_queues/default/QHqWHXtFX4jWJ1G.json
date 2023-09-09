@@ -1,0 +1,9 @@
+{
+	"id": "QHqWHXtFX4jWJ1G",
+	"json": "{\"id\":\"QHqWHXtFX4jWJ1G\",\"url\":\"https://unienrol.com/scholarships/nottingham-trent-university\",\"uniqueKey\":\"https://unienrol.com/scholarships/nottingham-trent-university\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262964859,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/nottingham-trent-university",
+	"url": "https://unienrol.com/scholarships/nottingham-trent-university"
+}

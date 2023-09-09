@@ -1,0 +1,9 @@
+{
+	"id": "16odtOrtpc5rniD",
+	"json": "{\"id\":\"16odtOrtpc5rniD\",\"url\":\"https://unienrol.com/scholarships/details/7b8ea2/dmu-international-scholarship-award-postgraduate-specific-courses\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/7b8ea2/dmu-international-scholarship-award-postgraduate-specific-courses\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"De Montfort University (DMU)\",\"country\":\"Malaysia\",\"type\":[\"OTHERS\"],\"coverage\":[\"Tuition Fee\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/7b8ea2/dmu-international-scholarship-award-postgraduate-specific-courses\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262981762,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/7b8ea2/dmu-international-scholarship-award-postgraduate-specific-courses",
+	"url": "https://unienrol.com/scholarships/details/7b8ea2/dmu-international-scholarship-award-postgraduate-specific-courses"
+}

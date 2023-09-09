@@ -1,0 +1,9 @@
+{
+	"id": "3hM90emJycLbw2o",
+	"json": "{\"id\":\"3hM90emJycLbw2o\",\"url\":\"https://unienrol.com/scholarships/details/723d82/first-city-uc-merit-scholarship-diploma\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/723d82/first-city-uc-merit-scholarship-diploma\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"First City University College\",\"country\":\"Malaysia\",\"type\":[\"MERIT\",\"FORECAST RESULTS\"],\"coverage\":[\"Tuition Fee\",\"PTPTN Compatible\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/723d82/first-city-uc-merit-scholarship-diploma\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262984401,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/723d82/first-city-uc-merit-scholarship-diploma",
+	"url": "https://unienrol.com/scholarships/details/723d82/first-city-uc-merit-scholarship-diploma"
+}

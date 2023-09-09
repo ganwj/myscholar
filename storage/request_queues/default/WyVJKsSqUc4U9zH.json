@@ -1,0 +1,9 @@
+{
+	"id": "WyVJKsSqUc4U9zH",
+	"json": "{\"id\":\"WyVJKsSqUc4U9zH\",\"url\":\"https://unienrol.com/scholarships/details/4fd562/disted-graduation-reward-scheme\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/4fd562/disted-graduation-reward-scheme\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"DISTED College\",\"country\":\"Malaysia\",\"type\":[\"OTHERS\"],\"coverage\":[\"Tuition Fee\"],\"interview\":\"no\",\"instant_approval\":\"no\",\"url\":\"https://unienrol.com/scholarships/details/4fd562/disted-graduation-reward-scheme\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262981724,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/4fd562/disted-graduation-reward-scheme",
+	"url": "https://unienrol.com/scholarships/details/4fd562/disted-graduation-reward-scheme"
+}

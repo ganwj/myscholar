@@ -1,0 +1,9 @@
+{
+	"id": "9oXrNQq27Ac2hYW",
+	"json": "{\"id\":\"9oXrNQq27Ac2hYW\",\"url\":\"https://unienrol.com/scholarships/equator-college\",\"loadedUrl\":\"https://unienrol.com/scholarships/equator-college\",\"uniqueKey\":\"https://unienrol.com/scholarships/equator-college\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-09-09T12:36:22.048Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/equator-college",
+	"url": "https://unienrol.com/scholarships/equator-college"
+}

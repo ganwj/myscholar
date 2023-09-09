@@ -1,0 +1,9 @@
+{
+	"id": "buZ6FZmice4BoBW",
+	"json": "{\"id\":\"buZ6FZmice4BoBW\",\"url\":\"https://unienrol.com/scholarships/details/4454f2/hcuc-special-bursary-award\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/4454f2/hcuc-special-bursary-award\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"Han Chiang University College of Communication\",\"country\":\"Malaysia\",\"type\":[\"FINANCIAL\"],\"coverage\":[\"Tuition Fee\",\"PTPTN Compatible\"],\"interview\":\"yes\",\"instant_approval\":\"no\",\"url\":\"https://unienrol.com/scholarships/details/4454f2/hcuc-special-bursary-award\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262985396,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/4454f2/hcuc-special-bursary-award",
+	"url": "https://unienrol.com/scholarships/details/4454f2/hcuc-special-bursary-award"
+}

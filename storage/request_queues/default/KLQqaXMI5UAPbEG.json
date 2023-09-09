@@ -1,0 +1,9 @@
+{
+	"id": "KLQqaXMI5UAPbEG",
+	"json": "{\"id\":\"KLQqaXMI5UAPbEG\",\"url\":\"https://unienrol.com/scholarships/details/362493/crescendo-merit-scholarship-foundation\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/362493/crescendo-merit-scholarship-foundation\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"Crescendo International College\",\"country\":\"Malaysia\",\"type\":[\"MERIT\"],\"coverage\":[\"Tuition Fee\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/362493/crescendo-merit-scholarship-foundation\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262976030,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/362493/crescendo-merit-scholarship-foundation",
+	"url": "https://unienrol.com/scholarships/details/362493/crescendo-merit-scholarship-foundation"
+}

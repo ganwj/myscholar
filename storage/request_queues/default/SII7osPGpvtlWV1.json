@@ -1,0 +1,9 @@
+{
+	"id": "SII7osPGpvtlWV1",
+	"json": "{\"id\":\"SII7osPGpvtlWV1\",\"url\":\"https://unienrol.com/scholarships/details/6c3672/dasein-study-grant-by-portfolio\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/6c3672/dasein-study-grant-by-portfolio\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"Dasein Academy of Art\",\"country\":\"Malaysia\",\"type\":[\"OTHERS\"],\"coverage\":[\"Tuition Fee\",\"PTPTN Compatible\"],\"interview\":\"yes\",\"instant_approval\":\"no\",\"url\":\"https://unienrol.com/scholarships/details/6c3672/dasein-study-grant-by-portfolio\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262979187,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/6c3672/dasein-study-grant-by-portfolio",
+	"url": "https://unienrol.com/scholarships/details/6c3672/dasein-study-grant-by-portfolio"
+}

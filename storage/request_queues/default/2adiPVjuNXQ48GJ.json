@@ -1,0 +1,9 @@
+{
+	"id": "2adiPVjuNXQ48GJ",
+	"json": "{\"id\":\"2adiPVjuNXQ48GJ\",\"url\":\"https://unienrol.com/scholarships/teesside-university\",\"uniqueKey\":\"https://unienrol.com/scholarships/teesside-university\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262964958,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/teesside-university",
+	"url": "https://unienrol.com/scholarships/teesside-university"
+}

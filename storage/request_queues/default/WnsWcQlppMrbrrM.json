@@ -1,0 +1,9 @@
+{
+	"id": "WnsWcQlppMrbrrM",
+	"json": "{\"id\":\"WnsWcQlppMrbrrM\",\"url\":\"https://unienrol.com/scholarships/details/414b62/disted-merit-award-up-to-rm-10k\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/414b62/disted-merit-award-up-to-rm-10k\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"DISTED College\",\"country\":\"Malaysia\",\"type\":[\"MERIT\",\"FORECAST RESULTS\"],\"coverage\":[\"Tuition Fee\",\"PTPTN Compatible\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/414b62/disted-merit-award-up-to-rm-10k\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262981710,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/414b62/disted-merit-award-up-to-rm-10k",
+	"url": "https://unienrol.com/scholarships/details/414b62/disted-merit-award-up-to-rm-10k"
+}

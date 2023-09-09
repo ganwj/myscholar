@@ -1,0 +1,9 @@
+{
+	"id": "H003ECrC6g9zBaP",
+	"json": "{\"id\":\"H003ECrC6g9zBaP\",\"url\":\"https://unienrol.com/scholarships/university-of-technology-sarawak-uts\",\"uniqueKey\":\"https://unienrol.com/scholarships/university-of-technology-sarawak-uts\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262965030,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/university-of-technology-sarawak-uts",
+	"url": "https://unienrol.com/scholarships/university-of-technology-sarawak-uts"
+}

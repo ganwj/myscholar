@@ -1,0 +1,9 @@
+{
+	"id": "sv6AEB3CDvlKwOF",
+	"json": "{\"id\":\"sv6AEB3CDvlKwOF\",\"url\":\"https://unienrol.com/scholarships/details/4c8a23/aimst-bursary-for-bsc-bioinformatics\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/4c8a23/aimst-bursary-for-bsc-bioinformatics\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"AIMST University\",\"country\":\"Malaysia\",\"type\":[\"OTHERS\",\"FORECAST RESULTS\"],\"coverage\":[\"Tuition Fee\",\"Resource Fee\",\"PTPTN Compatible\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/4c8a23/aimst-bursary-for-bsc-bioinformatics\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262968146,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/4c8a23/aimst-bursary-for-bsc-bioinformatics",
+	"url": "https://unienrol.com/scholarships/details/4c8a23/aimst-bursary-for-bsc-bioinformatics"
+}

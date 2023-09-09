@@ -1,0 +1,9 @@
+{
+	"id": "uJvSJoU8C4PaIsS",
+	"json": "{\"id\":\"uJvSJoU8C4PaIsS\",\"url\":\"https://unienrol.com/scholarships/universiti-tenaga-nasional-uniten\",\"uniqueKey\":\"https://unienrol.com/scholarships/universiti-tenaga-nasional-uniten\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262964984,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/universiti-tenaga-nasional-uniten",
+	"url": "https://unienrol.com/scholarships/universiti-tenaga-nasional-uniten"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "J5DbtOxCEEjLgdi",
+	"json": "{\"id\":\"J5DbtOxCEEjLgdi\",\"url\":\"https://unienrol.com/scholarships/australian-national-university-anu-\",\"loadedUrl\":\"https://unienrol.com/scholarships/australian-national-university-anu--australian-national-university-anu\",\"uniqueKey\":\"https://unienrol.com/scholarships/australian-national-university-anu-\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-09-09T12:36:09.312Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/australian-national-university-anu-",
+	"url": "https://unienrol.com/scholarships/australian-national-university-anu-"
+}

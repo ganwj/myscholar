@@ -1,0 +1,9 @@
+{
+	"id": "MmuHxT5xBcyvPtq",
+	"json": "{\"id\":\"MmuHxT5xBcyvPtq\",\"url\":\"https://unienrol.com/scholarships/university-of-huddersfield\",\"uniqueKey\":\"https://unienrol.com/scholarships/university-of-huddersfield\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262964766,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/university-of-huddersfield",
+	"url": "https://unienrol.com/scholarships/university-of-huddersfield"
+}

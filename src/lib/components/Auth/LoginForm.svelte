@@ -17,17 +17,17 @@
 				<h3 class="text-xl font-medium text-gray-900 dark:text-white p-0">Sign In</h3>
 				<Label class="space-y-2">
 					<span>Email</span>
-					<Input type="email" name="email" placeholder="name@gmail.com" required />
+					<Input type="email" name="email" placeholder="name@domain.com" required />
 				</Label>
 				<Label class="space-y-2">
 					<span>Password</span>
-					<Input type="password" name="password" placeholder="•••••" required />
+					<Input type="password" name="password" placeholder="*****" required />
 				</Label>
 				<div class="flex items-start">
 					<a
 						href="/forgot-password"
 						class="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500"
-						>Forgot Password?</a
+						>Forgot Password</a
 					>
 				</div>
 				<Button size="sm" type="submit" class="w-full1">Sign In</Button>

@@ -1,0 +1,9 @@
+{
+	"id": "1MvFyLHcJE1Kb27",
+	"json": "{\"id\":\"1MvFyLHcJE1Kb27\",\"url\":\"https://unienrol.com/scholarships/details/5f6dd3/dmu-international-scholarship-award-postgraduate\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/5f6dd3/dmu-international-scholarship-award-postgraduate\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"De Montfort University (DMU)\",\"country\":\"Malaysia\",\"type\":[\"OTHERS\"],\"coverage\":[\"Tuition Fee\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/5f6dd3/dmu-international-scholarship-award-postgraduate\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
+	"method": "GET",
+	"orderNo": 1694262981770,
+	"retryCount": 0,
+	"uniqueKey": "https://unienrol.com/scholarships/details/5f6dd3/dmu-international-scholarship-award-postgraduate",
+	"url": "https://unienrol.com/scholarships/details/5f6dd3/dmu-international-scholarship-award-postgraduate"
+}
