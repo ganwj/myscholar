@@ -1,5 +1,5 @@
 import { PlaywrightCrawler } from 'crawlee';
-import { router } from './router.server.js';
+import { router } from './router.js';
 
 const crawler = new PlaywrightCrawler({
 	requestHandler: router

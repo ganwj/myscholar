@@ -1,5 +1,11 @@
+import { saveScholarship } from '$lib/firebase/database.server';
+import { saveFileToBucket } from '$lib/firebase/firestorage.server';
 import { createPlaywrightRouter, Request } from 'crawlee';
-import https from 'https';
+import { once } from 'events';
+import { request } from 'https';
+import { tmpdir } from 'os';
+import path from 'path';
+import { v4 as uuidv4 } from 'uuid';
 
 export const router = createPlaywrightRouter();
 
@@ -51,7 +57,7 @@ router.addHandler('scholarship_detail', async ({ request, page }) => {
 					}
 					const amountMatching = {
 						title: table.querySelector('div.col-12.col-md-8.p-2>span')?.textContent?.trim(),
-						items: JSON.stringify(items),
+						items,
 						remarks: table.querySelector('div.row.mt-2 span')?.textContent?.trim()
 					};
 					amountMatchingArray.push(amountMatching);
@@ -83,46 +89,50 @@ router.addHandler('scholarship_detail', async ({ request, page }) => {
 		},
 		request.userData
 	);
-	console.log(scholarshipDetails);
+	saveScholarship(scholarshipDetails);
 });
 
-router.addHandler('scholarship_overview', async ({ page, crawler }) => {
+router.addHandler('scholarship_overview', async ({ page, crawler, request }) => {
 	const country = await page.$eval('#nav-Location>div>div:nth-child(1) button span', (element) => {
 		return element.textContent?.trim() ?? '';
 	});
 
-	const institution = await page.$eval(
-		'#nav-Location>div>div:nth-child(3) li.active label',
-		(element) => {
-			return element.textContent?.trim() ?? '';
-		}
+	// const institution = await page.$eval(
+	// 	'#nav-Location>div>div:nth-child(3) li.active label',
+	// 	(element) => {
+	// 		return element.textContent?.trim() ?? '';
+	// 	}
+	// );
+
+	const scholarships = await page.$$eval(
+		'a.scholarship-item',
+		(scholarships, userData) => {
+			const data = [];
+			for (const scholarship of scholarships) {
+				const type = scholarship.querySelectorAll('.results-badge span');
+				const coverage = scholarship.querySelectorAll('.benefits-list span');
+				const interview = scholarship.querySelector('.extra-info-top');
+				const instantApprove = scholarship.querySelector('.extra-info-bottom');
+				// @ts-ignore
+				const toText = (element) => element && element.innerText.trim();
+				const item = {
+					institution: userData.institution,
+					country: '',
+					type: Array.from(type).map((type) => toText(type)),
+					coverage: Array.from(coverage).map((benefit) => toText(benefit)),
+					interview: interview === null ? 'yes' : 'no',
+					instant_approval: instantApprove === null ? 'no' : 'yes',
+					pictureURL: userData.pictureURL,
+					url: scholarship.getAttribute('href')
+				};
+				data.push(item);
+			}
+			return data;
+		},
+		request.userData
 	);
 
-	const scholarships = await page.$$eval('a.scholarship-item', (scholarships) => {
-		const data = [];
-		for (const scholarship of scholarships) {
-			const type = scholarship.querySelectorAll('.results-badge span');
-			const coverage = scholarship.querySelectorAll('.benefits-list span');
-			const interview = scholarship.querySelector('.extra-info-top');
-			const instantApprove = scholarship.querySelector('.extra-info-bottom');
-			// @ts-ignore
-			const toText = (element) => element && element.innerText.trim();
-			const item = {
-				institution: '',
-				country: '',
-				type: Array.from(type).map((type) => toText(type)),
-				coverage: Array.from(coverage).map((benefit) => toText(benefit)),
-				interview: interview === null ? 'yes' : 'no',
-				instant_approval: instantApprove === null ? 'no' : 'yes',
-				url: scholarship.getAttribute('href')
-			};
-			data.push(item);
-		}
-		return data;
-	});
-
 	for (const scholarship of scholarships) {
-		scholarship.institution = institution;
 		scholarship.country = country;
 	}
 
@@ -144,17 +154,52 @@ router.addDefaultHandler(async ({ page, crawler }) => {
 		return links.map((link) => link.getAttribute('href'));
 	});
 
-	const images = await page.$$eval('.uni-item-logo img', (images) => {
-		images.map((image) => {
-			https.get(image.href);
-		});
+	// const images = await page.$$eval('.uni-item-logo img', (images) => {
+	// 	return images.map((image) => image.getAttribute('src'));
+	// });
+
+	const institutions = await page.$$eval('.course-item.mb-3', async (institutions) => {
+		const data = [];
+		for (const institution of institutions) {
+			const name = institution.querySelector('.course-item-name a')?.textContent?.trim();
+			/**
+			 * @type {string | null | undefined} image
+			 */
+			const image = institution.querySelector('.uni-item-logo img')?.getAttribute('src');
+			let pictureURL;
+
+			if (image) {
+				const filePath = path.join(tmpdir(), uuidv4());
+				const imageStream = request(image).pipe(require('fs').createWriteStream(filePath));
+				await once(imageStream, 'finish');
+				pictureURL = await saveFileToBucket(filePath, `instituions/${name}/logo`);
+			}
+
+			const item = {
+				institution: name,
+				pictureURL
+			};
+			data.push(item);
+		}
+		return data;
 	});
+
+	// for (const image of images) {
+	// 	if (image !== null) {
+	// 		const filePath = path.join(tmpdir(), uuidv4());
+	// 		const imageStream = request(image).pipe(require('fs').createWriteStream(filePath));
+	// 		imageStream.on('finish', () => {
+	// 			saveFileToBucket(filePath);
+	// 		});
+	// 	}
+	// }
 
 	const requests = url.map(
 		(link) =>
 			new Request({
 				// @ts-ignore
 				url: link,
+				userData: institutions,
 				label: 'scholarship_overview'
 			})
 	);
