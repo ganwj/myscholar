@@ -1,9 +1,0 @@
-{
-	"id": "sMVVFXLXctTgAvd",
-	"json": "{\"id\":\"sMVVFXLXctTgAvd\",\"url\":\"https://unienrol.com/scholarships/ucsi-university-&-colleges\",\"uniqueKey\":\"https://unienrol.com/scholarships/ucsi-university-&-colleges\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1694262964975,
-	"retryCount": 0,
-	"uniqueKey": "https://unienrol.com/scholarships/ucsi-university-&-colleges",
-	"url": "https://unienrol.com/scholarships/ucsi-university-&-colleges"
-}

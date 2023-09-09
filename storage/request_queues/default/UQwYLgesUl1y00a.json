@@ -1,9 +1,0 @@
-{
-	"id": "UQwYLgesUl1y00a",
-	"json": "{\"id\":\"UQwYLgesUl1y00a\",\"url\":\"https://unienrol.com/scholarships/details/1161a8/apu-100-merit-award\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/1161a8/apu-100-merit-award\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"Asia Pacific University of Technology & Innovation (APU)\",\"country\":\"Malaysia\",\"type\":[\"MERIT\",\"FORECAST RESULTS\"],\"coverage\":[\"Tuition Fee\"],\"interview\":\"yes\",\"instant_approval\":\"no\",\"url\":\"https://unienrol.com/scholarships/details/1161a8/apu-100-merit-award\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1694262970885,
-	"retryCount": 0,
-	"uniqueKey": "https://unienrol.com/scholarships/details/1161a8/apu-100-merit-award",
-	"url": "https://unienrol.com/scholarships/details/1161a8/apu-100-merit-award"
-}

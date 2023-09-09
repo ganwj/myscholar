@@ -1,9 +1,0 @@
-{
-	"id": "gA8xs0PX4cxsPbp",
-	"json": "{\"id\":\"gA8xs0PX4cxsPbp\",\"url\":\"https://unienrol.com/scholarships/psb-academy\",\"uniqueKey\":\"https://unienrol.com/scholarships/psb-academy\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1694262964889,
-	"retryCount": 0,
-	"uniqueKey": "https://unienrol.com/scholarships/psb-academy",
-	"url": "https://unienrol.com/scholarships/psb-academy"
-}

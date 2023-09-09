@@ -1,9 +1,0 @@
-{
-	"id": "iHAyJTW3VAzCXgt",
-	"json": "{\"id\":\"iHAyJTW3VAzCXgt\",\"url\":\"https://unienrol.com/scholarships/details/05f967/hcuc-scholarship-foundation-diploma\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/05f967/hcuc-scholarship-foundation-diploma\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"Han Chiang University College of Communication\",\"country\":\"Malaysia\",\"type\":[\"MERIT\"],\"coverage\":[\"Tuition Fee\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/05f967/hcuc-scholarship-foundation-diploma\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1694262985358,
-	"retryCount": 0,
-	"uniqueKey": "https://unienrol.com/scholarships/details/05f967/hcuc-scholarship-foundation-diploma",
-	"url": "https://unienrol.com/scholarships/details/05f967/hcuc-scholarship-foundation-diploma"
-}

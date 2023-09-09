@@ -1,9 +1,0 @@
-{
-	"id": "jmHO01NL0T8gn8d",
-	"json": "{\"id\":\"jmHO01NL0T8gn8d\",\"url\":\"https://unienrol.com/scholarships/details/749ce2/bac-scholarship-a-level-sciences\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/749ce2/bac-scholarship-a-level-sciences\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"Brickfields Asia College (BAC)\",\"country\":\"Malaysia\",\"type\":[\"MERIT\",\"FORECAST RESULTS\"],\"coverage\":[\"Tuition Fee\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/749ce2/bac-scholarship-a-level-sciences\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1694262971664,
-	"retryCount": 0,
-	"uniqueKey": "https://unienrol.com/scholarships/details/749ce2/bac-scholarship-a-level-sciences",
-	"url": "https://unienrol.com/scholarships/details/749ce2/bac-scholarship-a-level-sciences"
-}

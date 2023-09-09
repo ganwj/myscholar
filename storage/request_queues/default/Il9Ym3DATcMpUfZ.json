@@ -1,9 +1,0 @@
-{
-	"id": "Il9Ym3DATcMpUfZ",
-	"json": "{\"id\":\"Il9Ym3DATcMpUfZ\",\"url\":\"https://unienrol.com/scholarships/university-of-bath-uk\",\"loadedUrl\":\"https://unienrol.com/scholarships/university-of-bath-uk\",\"uniqueKey\":\"https://unienrol.com/scholarships/university-of-bath-uk\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-09-09T12:36:15.118Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://unienrol.com/scholarships/university-of-bath-uk",
-	"url": "https://unienrol.com/scholarships/university-of-bath-uk"
-}

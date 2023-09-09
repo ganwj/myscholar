@@ -1,9 +1,0 @@
-{
-	"id": "8jawqFlKKFpwBp7",
-	"json": "{\"id\":\"8jawqFlKKFpwBp7\",\"url\":\"https://unienrol.com/scholarships/details/5ee546/hcuc-scholarship-degree\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/5ee546/hcuc-scholarship-degree\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"Han Chiang University College of Communication\",\"country\":\"Malaysia\",\"type\":[\"MERIT\"],\"coverage\":[\"Tuition Fee\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/5ee546/hcuc-scholarship-degree\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1694262985373,
-	"retryCount": 0,
-	"uniqueKey": "https://unienrol.com/scholarships/details/5ee546/hcuc-scholarship-degree",
-	"url": "https://unienrol.com/scholarships/details/5ee546/hcuc-scholarship-degree"
-}

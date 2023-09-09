@@ -1,9 +1,0 @@
-{
-	"id": "naAmDHNJXiM9b1S",
-	"json": "{\"id\":\"naAmDHNJXiM9b1S\",\"url\":\"https://unienrol.com/scholarships/details/53b972/hcuc-sports-scholarship\",\"uniqueKey\":\"https://unienrol.com/scholarships/details/53b972/hcuc-sports-scholarship\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"institution\":\"Han Chiang University College of Communication\",\"country\":\"Malaysia\",\"type\":[\"SPORTS\"],\"coverage\":[\"Tuition Fee\"],\"interview\":\"no\",\"instant_approval\":\"yes\",\"url\":\"https://unienrol.com/scholarships/details/53b972/hcuc-sports-scholarship\",\"label\":\"scholarship_detail\",\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1694262985378,
-	"retryCount": 0,
-	"uniqueKey": "https://unienrol.com/scholarships/details/53b972/hcuc-sports-scholarship",
-	"url": "https://unienrol.com/scholarships/details/53b972/hcuc-sports-scholarship"
-}

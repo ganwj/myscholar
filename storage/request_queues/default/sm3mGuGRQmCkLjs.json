@@ -1,9 +1,0 @@
-{
-	"id": "sm3mGuGRQmCkLjs",
-	"json": "{\"id\":\"sm3mGuGRQmCkLjs\",\"url\":\"https://unienrol.com/scholarships/first-city-university-college\",\"loadedUrl\":\"https://unienrol.com/scholarships/first-city-university-college\",\"uniqueKey\":\"https://unienrol.com/scholarships/first-city-university-college\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-09-09T12:36:24.432Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://unienrol.com/scholarships/first-city-university-college",
-	"url": "https://unienrol.com/scholarships/first-city-university-college"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "DYl9JlNqdXJcIKW",
-	"json": "{\"id\":\"DYl9JlNqdXJcIKW\",\"url\":\"https://unienrol.com/scholarships/university-of-galway\",\"loadedUrl\":\"https://unienrol.com/scholarships/university-of-galway\",\"uniqueKey\":\"https://unienrol.com/scholarships/university-of-galway\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false,\"state\":4}},\"handledAt\":\"2023-09-09T12:36:24.461Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://unienrol.com/scholarships/university-of-galway",
-	"url": "https://unienrol.com/scholarships/university-of-galway"
-}

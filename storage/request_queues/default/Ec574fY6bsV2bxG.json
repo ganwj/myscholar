@@ -1,9 +1,0 @@
-{
-	"id": "Ec574fY6bsV2bxG",
-	"json": "{\"id\":\"Ec574fY6bsV2bxG\",\"url\":\"https://unienrol.com/scholarships/universiti-sains-malaysia-usm\",\"uniqueKey\":\"https://unienrol.com/scholarships/universiti-sains-malaysia-usm\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1694262965005,
-	"retryCount": 0,
-	"uniqueKey": "https://unienrol.com/scholarships/universiti-sains-malaysia-usm",
-	"url": "https://unienrol.com/scholarships/universiti-sains-malaysia-usm"
-}

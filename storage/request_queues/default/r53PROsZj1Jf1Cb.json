@@ -1,9 +1,0 @@
-{
-	"id": "r53PROsZj1Jf1Cb",
-	"json": "{\"id\":\"r53PROsZj1Jf1Cb\",\"url\":\"https://unienrol.com/scholarships/taylors-university\",\"uniqueKey\":\"https://unienrol.com/scholarships/taylors-university\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"scholarship_overview\",\"__crawlee\":{\"skipNavigation\":false}}}",
-	"method": "GET",
-	"orderNo": 1694262964954,
-	"retryCount": 0,
-	"uniqueKey": "https://unienrol.com/scholarships/taylors-university",
-	"url": "https://unienrol.com/scholarships/taylors-university"
-}
