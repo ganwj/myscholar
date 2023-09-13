@@ -38,8 +38,6 @@
 	}
 </script>
 
-<RegisterForm on:submit={register} />
-
-<svelte:head>
-	<title>Sign Up</title>
-</svelte:head>
+<div class="form-container mb-10">
+	<RegisterForm on:submit={register} />
+</div>

@@ -32,8 +32,6 @@
 	}
 </script>
 
-<LoginForm on:submit={onLogin} />
-
-<svelte:head>
-	<title>Login</title>
-</svelte:head>
+<div class="form-container mb-10">
+	<LoginForm on:submit={onLogin} />
+</div>

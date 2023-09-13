@@ -3,7 +3,7 @@
 	import messagesStore from '$lib/stores/messages.store';
 	import '../app.postcss';
 	import { Alert } from 'flowbite-svelte';
-	import { Icon } from 'flowbite-svelte-icons';
+	import { CheckCircleSolid, ExclamationCircleSolid } from 'flowbite-svelte-icons';
 	import '$lib/firebase/firebase.client';
 	import authStore from '$lib/stores/auth.store';
 	import { onMount } from 'svelte';
@@ -52,13 +52,13 @@
 	{#if $messagesStore.show}
 		{#if $messagesStore.type === 'error'}
 			<Alert class="mt-4" color="red" dismissable on:close={closeMessage}>
-				<Icon name="exclamation-circle-solid" slot="icon" class="w-4 h-4" />
+				<ExclamationCircleSolid slot="icon" class="w-4 h-4" />
 				<span class="font-medium">Error: </span>
 				{$messagesStore.message}
 			</Alert>
 		{:else if $messagesStore.type === 'success'}
 			<Alert class="mt-4" color="green" dismissable on:close={closeMessage}>
-				<Icon name="check-circle-solid" slot="icon" class="w-4 h-4" />
+				<CheckCircleSolid slot="icon" class="w-4 h-4" />
 				<span class="font-medium">Success: </span>
 				{$messagesStore.message}
 			</Alert>

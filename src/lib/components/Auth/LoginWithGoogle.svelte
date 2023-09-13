@@ -1,15 +1,11 @@
 <script>
 	import { Button } from 'flowbite-svelte';
-	import { Icon } from 'flowbite-svelte-icons';
+	import { GoogleSolid } from 'flowbite-svelte-icons';
 	import { page } from '$app/stores';
 	import { loginWithGoogle } from '$lib/firebase/auth.client';
 	import { afterLogin } from '$lib/helpers/route.helper';
 	import messagesStore from '$lib/stores/messages.store';
-	/**
-	 * @type {string}
-	 */
-	export let option;
-
+	
 	async function loginGoogle() {
 		try {
 			const user = await loginWithGoogle();
@@ -26,6 +22,6 @@
 </script>
 
 <Button on:click={loginGoogle} size="sm" color="blue" class="!mt-4">
-	<Icon name="google-solid" class="w-3 h-3 mr-2" />
-	{option} with Google
+	<GoogleSolid name="google-solid" class="w-3 h-3 mr-2" />
+	Sign In with Google
 </Button>

@@ -7,6 +7,7 @@ import {
 	PUBLIC_PROJECT_ID,
 	PUBLIC_STORAGE_BUCKET
 } from '$env/static/public';
+import { } from '$env/static/public';
 import { getApps, initializeApp } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
 import { getFirestore } from 'firebase/firestore';

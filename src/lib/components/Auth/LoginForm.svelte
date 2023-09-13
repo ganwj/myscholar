@@ -17,7 +17,7 @@
 				<h3 class="text-xl font-medium text-gray-900 dark:text-white p-0">Sign In</h3>
 				<Label class="space-y-2">
 					<span>Email</span>
-					<Input type="email" name="email" placeholder="name@domain.com" required />
+					<Input type="email" name="email" placeholder="name@gmail.com" required />
 				</Label>
 				<Label class="space-y-2">
 					<span>Password</span>
@@ -27,11 +27,11 @@
 					<a
 						href="/forgot-password"
 						class="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500"
-						>Forgot Password</a
+						>Forgot Password?</a
 					>
 				</div>
-				<Button size="sm" type="submit" class="w-full1">Sign In</Button>
-				<LoginWithGoogle option="Sign In" />
+				<Button size="sm" type="submit" class="w-full">Sign In</Button>
+				<LoginWithGoogle />
 				<p class="text-sm font-light text-gray-500 dark:text-gray-400">
 					Don’t have an account yet? <a
 						href="/signup"
