@@ -12,7 +12,7 @@
 
 <div class="scholarship-list">
 	<Card
-		href="/scholarship-detail/{scholarship.id}"
+		href="/scholarships/scholarship-detail/{scholarship.id}"
 		class="horizontal reverse={hcard} relative items-center md:grid grid-cols-5 gap-10 md:mb-5 md:max-w-2xl"
 	>
 		<div class="image-box mt-8 col-span-2 md:mt-0">
@@ -26,7 +26,7 @@
 			</div>
 		{/if}
 		<div class="scholarship-detail col-span-3">
-			<h3 class="mb-2 text-lg font-bold tracking-tight text-gray-800 dark:text-white">
+			<h3 class="mb-2 text-lg font-bold tracking-tight text-gray-700 dark:text-white">
 				{scholarship.name}
 			</h3>
 			<div>

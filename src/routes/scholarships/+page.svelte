@@ -3,8 +3,12 @@
 	import { page } from '$app/stores';
 	import Scholarship from '$lib/components/Scholarships/Scholarship.svelte';
 	import messagesStore from '$lib/stores/messages.store.js';
-	import { Pagination } from 'flowbite-svelte';
-	import { ChervonDoubleLeftSolid, ChervonDoubleRightSolid } from 'flowbite-svelte-icons';
+	import { Input, Pagination } from 'flowbite-svelte';
+	import {
+		ChervonDoubleLeftSolid,
+		ChervonDoubleRightSolid,
+		SearchOutline
+	} from 'flowbite-svelte-icons';
 
 	export let data;
 	$: activeUrl = $page.url.searchParams.get('page');
@@ -62,6 +66,12 @@
 	}
 </script>
 
+<!-- <div class="search-bar relative md:block">
+	<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+		<SearchOutline class="w-4 h-4" />
+	</div>
+	<Input id="search-navbar" class="pl-10 focus:ring-0 border-0" placeholder="Search..." />
+</div> -->
 <div class="w-10/12 mx-auto scholarships-container py-5 mt-8 md:11/12">
 	{#each data.scholarships as scholarship (scholarship.id)}
 		<div class="mb-5 md:mb-0">

@@ -59,7 +59,9 @@
 					<img src={data.scholarship.imageURL} alt="Institution logo" />
 				</div>
 				<div class="lg:flex lg:flex-col lg:justify-between">
-					<h4 class="font-semibold text-xl text-red-800 md:text-2xl">{data.scholarship.name}</h4>
+					<h4 class="font-semibold text-xl text-gray-800 md:text-2xl">
+						{data.scholarship.name}
+					</h4>
 					<div
 						class="details-awards text-red-800 font-medium mt-10 text-center text-l hidden lg:text-xl lg:block"
 					>
@@ -229,8 +231,7 @@
 	}
 
 	.details-awards {
-		/* background-color: #fbfbfb; */
-		background-color: #f1f5f9;
+		background-color: #fbfbfb;
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 		padding: 20px 40px;
 	}
