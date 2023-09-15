@@ -1,4 +1,4 @@
-import { PAGE_SIZE } from '$env/static/private';
+import { PUBLIC_PAGE_SIZE } from '$env/static/public';
 import { db } from '$lib/firebase/firebase.server';
 import admin from 'firebase-admin';
 // @ts-ignore
@@ -51,12 +51,12 @@ export async function showAllScholarships(page = 1) {
 
 	const totalScholarships = await scholarshipCount.data().count;
 
-	const totalPages = Math.ceil(totalScholarships / +PAGE_SIZE);
+	const totalPages = Math.ceil(totalScholarships / +PUBLIC_PAGE_SIZE);
 
 	const scholarshipsSnapshot = await db
 		.collection('scholarships')
-		.limit(+PAGE_SIZE)
-		.offset((page - 1) * +PAGE_SIZE)
+		.limit(+PUBLIC_PAGE_SIZE)
+		.offset((page - 1) * +PUBLIC_PAGE_SIZE)
 		.orderBy('institution', 'asc')
 		.get();
 
