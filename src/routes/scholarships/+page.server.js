@@ -1,4 +1,8 @@
-import { PUBLIC_PAGE_SIZE, PUBLIC_SEARCH_API_KEY } from '$env/static/public';
+import {
+	PUBLIC_PAGE_SIZE,
+	PUBLIC_ALGOLIA_API_KEY,
+	PUBLIC_ALGOLIA_APPLICATION_ID
+} from '$env/static/public';
 import { showAllScholarships } from '$lib/firebase/database.server';
 import { db } from '$lib/firebase/firebase.server';
 import algoliasearch from 'algoliasearch/lite';
@@ -7,21 +11,21 @@ import algoliasearch from 'algoliasearch/lite';
 export async function load({ url }) {
 	const page = url.searchParams.get('page') || 1;
 	const query = url.searchParams.get('q');
+	const client = algoliasearch(PUBLIC_ALGOLIA_APPLICATION_ID, PUBLIC_ALGOLIA_API_KEY);
+	const index = client.initIndex('scholarships_new');
 
 	if (query === '' || query === null) {
-		const { scholarships, totalPages } = await showAllScholarships(+page);
+		const { scholarships, totalPages, totalScholarships } = await showAllScholarships(+page);
 
 		return {
 			scholarships,
 			page,
-			totalPages
+			totalPages,
+			totalScholarships
 		};
 	} else {
-		const client = algoliasearch('NB9FC86OPB', PUBLIC_SEARCH_API_KEY);
-		const index = client.initIndex('scholarships');
 		const result = await index.search(query);
 		const hits = result.hits;
-		// console.log('Results: ' + JSON.stringify(hits, null, 2));
 		const totalScholarships = hits.length;
 		const totalPages = Math.ceil(totalScholarships / +PUBLIC_PAGE_SIZE);
 		const scholarships = [];
@@ -44,7 +48,8 @@ export async function load({ url }) {
 		return {
 			scholarships,
 			page,
-			totalPages
+			totalPages,
+			totalScholarships
 		};
 	}
 }

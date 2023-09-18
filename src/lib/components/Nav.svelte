@@ -6,9 +6,9 @@
 	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Button } from 'flowbite-svelte';
 	$: activeUrl = $page.url.pathname;
 	let activeClass =
-		'text-gray-700 bg-gray-300 md:bg-transparent hover:md:underline md:hover:text-gray-900 md:dark:text-white dark:bg-primary-600 md:dark:bg-transparent';
+		'text-gray-700 bg-gray-300 md:bg-transparent md:hover:underline md:hover:text-gray-900 md:dark:text-white dark:bg-primary-600 md:dark:bg-transparent';
 	let nonActiveClass =
-		'text-gray-700 hover:bg-gray-200 hover:md:bg-transparent hover:md:underline md:border-0 md:hover:text-gray-900 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent';
+		'text-gray-700 hover:bg-gray-200 md:hover:bg-transparent md:hover:underline md:border-0 md:hover:text-gray-900 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent';
 	let navClass = 'border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800';
 	let navDivClass = 'flex flex-wrap justify-between items-center mx-auto max-w-screen-xl';
 	export let isLoggedIn = false;

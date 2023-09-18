@@ -106,11 +106,11 @@
 				<span>{data.scholarship.field_of_study}</span>
 			</div>
 		</div>
-		<section class="criteria mb-8 lg:mb-10">
+		<section class="criteria mb-8">
 			<h4 class="font-medium text-3xl text-red-800 mb-2">Criteria</h4>
 			<hr />
 			<div class="mt-5 ml-10 md:ml-14">
-				<ul class="list-disc list-outside leading-normal">
+				<ul class="list-disc list-outside">
 					{#each data.scholarship.criteria as criterion}
 						<li>{criterion}</li>
 						<div class="w-full mb-4 md:mb-3"></div>
@@ -118,11 +118,11 @@
 				</ul>
 			</div>
 		</section>
-		<section class="highlight mb-8 lg:mb-10">
+		<section class="highlight mb-8">
 			<h4 class="font-medium text-3xl text-red-800 mb-2">Highlights</h4>
 			<hr />
 			<div class="mt-5 ml-10 md:ml-14">
-				<ul class="list-disc list-outside leading-normal">
+				<ul class="list-disc list-outside">
 					{#each data.scholarship.highlights as highlight}
 						<li>{highlight}</li>
 						<div class="w-full mb-4 md:mb-3"></div>
@@ -130,11 +130,11 @@
 				</ul>
 			</div>
 		</section>
-		<section class="awards mb-8 lg:mb-10">
+		<section class="awards mb-8">
 			<h4 class="font-medium text-3xl text-red-800 mb-2">Awards</h4>
 			<hr />
 			<div class="mt-5 ml-10 md:ml-14">
-				<ul class="list-disc list-outside leading-normal">
+				<ul class="list-disc list-outside">
 					{#each data.scholarship.awards as award}
 						<li>{award}</li>
 						<div class="w-full mb-4 md:mb-3"></div>
@@ -187,11 +187,11 @@
 				</div>
 			{/if}
 		</section>
-		<section class="details mb-8 lg:mb-10">
+		<section class="details mb-8">
 			<h4 class="font-medium text-3xl text-red-800 mb-2">Details</h4>
 			<hr />
 			<div class="mt-5 ml-10 md:ml-14">
-				<ul class="list-disc list-outside leading-normal">
+				<ul class="list-disc list-outside">
 					{#each data.scholarship.details as detail}
 						<li>{detail}</li>
 						<div class="w-full mb-4 md:mb-3"></div>
@@ -203,7 +203,7 @@
 			<h4 class="font-medium text-3xl text-red-800 mb-2">Application</h4>
 			<hr />
 			<div class="mt-5 ml-10 md:ml-14">
-				<ul class="list-disc list-outside leading-normal">
+				<ul class="list-disc list-outside">
 					{#each data.scholarship.application as application}
 						<li>{application}</li>
 						<div class="w-full mb-4 md:mb-3"></div>
@@ -223,7 +223,6 @@
 		border: 2px solid rgba(0, 0, 0, 0.1);
 		box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.16);
 		max-width: 14rem;
-		max-height: 14rem;
 	}
 
 	.awards-container {

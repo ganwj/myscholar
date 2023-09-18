@@ -51,7 +51,7 @@
 </script>
 
 <Nav {isLoggedIn} />
-<div class="container mx-auto">
+<div class="w-screen mx-auto">
 	{#if $messagesStore.show}
 		{#if $messagesStore.type === 'error'}
 			<Alert class="mt-4 w-9/12 mx-auto" color="red" dismissable on:close={closeMessage}>

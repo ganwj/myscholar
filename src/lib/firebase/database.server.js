@@ -57,7 +57,7 @@ export async function showAllScholarships(page = 1) {
 		.collection('scholarships')
 		.limit(+PUBLIC_PAGE_SIZE)
 		.offset((page - 1) * +PUBLIC_PAGE_SIZE)
-		.orderBy('institution', 'asc')
+		.orderBy('name', 'asc')
 		.get();
 
 	const scholarships = scholarshipsSnapshot.docs.map((doc) => {
@@ -69,7 +69,8 @@ export async function showAllScholarships(page = 1) {
 
 	return {
 		scholarships,
-		totalPages
+		totalPages,
+		totalScholarships
 	};
 }
 
