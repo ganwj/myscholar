@@ -1,13 +1,13 @@
 <script>
 	import Nav from '$lib/components/Nav.svelte';
 	import messagesStore from '$lib/stores/messages.store';
-	import '../app.postcss';
 	import { Alert } from 'flowbite-svelte';
 	import { CheckCircleSolid, ExclamationCircleSolid } from 'flowbite-svelte-icons';
 	import '$lib/firebase/firebase.client';
 	import authStore from '$lib/stores/auth.store';
 	import { onMount } from 'svelte';
 	import { sendJWTToken } from '$lib/firebase/auth.client';
+	import '../app.postcss';
 	import '../app.css';
 
 	export let data;
@@ -51,7 +51,7 @@
 </script>
 
 <Nav {isLoggedIn} />
-<div class="w-screen mx-auto">
+<div class="container mx-auto">
 	{#if $messagesStore.show}
 		{#if $messagesStore.type === 'error'}
 			<Alert class="mt-4 w-9/12 mx-auto" color="red" dismissable on:close={closeMessage}>

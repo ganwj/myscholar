@@ -1,0 +1,45 @@
+.ais-Pagination-list {
+	justify-content: center;
+}
+
+.search-icon {
+	shrink: 0;
+	width: 1rem;
+	height: 1rem;
+}
+
+.no-hits {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	padding: 0 20px;
+	margin-top: 20px;
+}
+
+.no-hits > p {
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+}
+
+.flex-helper {
+	display: flex;
+	flex-direction: row;
+	gap: 0.625rem;
+	align-items: center;
+}
+
+.flex-helper p {
+	font-weight: 700;
+}
+
+.try-list {
+	margin-left: 1rem;
+	list-style-type: disc;
+	list-style-position: outside;
+}
+
+@media (min-width: 768px) {
+	.no-hits {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+}

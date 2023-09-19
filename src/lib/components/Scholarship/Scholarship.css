@@ -1,0 +1,166 @@
+.interview-info {
+	position: absolute;
+	color: #fff;
+	font-size: 0.65rem;
+	box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.16);
+	border: 2px solid #fff;
+	border-left: none;
+	padding: 3px 10px;
+	background-color: #3e67af;
+	left: 0;
+	top: 20px;
+}
+
+.image-box {
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.16);
+	max-width: 12rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.scholarship-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.ais-Hits-item {
+	max-width: 24rem;
+	position: relative;
+	display: block;
+	margin-bottom: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ais-Hits-item:hover {
+	background-color: #f3f4f6;
+}
+
+.title {
+	margin-bottom: 0.5rem;
+	margin-top: 1.5rem;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	font-weight: 700;
+	color: #374151;
+}
+
+.badge-country {
+	display: inline-flex;
+	padding-top: 0.125rem;
+	padding-bottom: 0.125rem;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+	margin-right: 0.25rem;
+	margin-top: 0.3rem;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.25rem;
+	border-color: #e5e7eb;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	font-weight: 500;
+	color: #991b1b;
+	background-color: #fee2e2;
+}
+
+.badge-type {
+	display: inline-flex;
+	padding-top: 0.125rem;
+	padding-bottom: 0.125rem;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+	margin-right: 0.25rem;
+	margin-top: 0.3rem;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.25rem;
+	border-color: #e5e7eb;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	font-weight: 500;
+	color: #065f46;
+	background-color: #d1fae5;
+}
+
+.description {
+	margin-top: 0.75rem;
+	margin-bottom: 0.75rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	font-weight: 400;
+	text-align: left;
+	color: #374151;
+	white-space: normal;
+}
+
+.applicable-for {
+	margin-bottom: 0.75rem;
+	font-weight: 600;
+	text-align: left;
+	color: #1f2937;
+	white-space: normal;
+}
+
+.bottom-detail {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+	align-items: center;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	color: #374151;
+}
+
+.scholarship-level {
+	display: flex;
+	align-items: center;
+}
+
+.stairs-icon {
+	margin-right: 0.375rem;
+}
+
+.scholarship-field {
+	display: flex;
+	align-items: center;
+}
+
+.book-icon {
+	margin-right: 0.375rem;
+	shrink: 0;
+	width: 1rem;
+	height: 1rem;
+}
+
+@media (min-width: 768px) {
+	.scholarship-wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.ais-Hits-item {
+		max-width: 42rem;
+	}
+
+	.image-box {
+		grid-column: 1 / span 1;
+	}
+
+	.interview-info {
+		top: 1.25rem;
+	}
+
+	.scholarship-detail {
+		grid-column: 2 / span 2;
+		margin-left: 25px;
+	}
+
+	.title {
+		margin-top: 0;
+	}
+}

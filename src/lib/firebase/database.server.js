@@ -34,14 +34,20 @@ export async function update() {
 		// AUSTRALIA
 		// .collection('scholarships')
 		// .where('institution', 'in', ['University of Tasmania (UTAS)'])
+		// .collection('scholarships')
+		// .where('application', 'array-contains', '')
+		// .collection('scholarships')
+		// .where('field_of_study', '==', 'Any field')
 		.collection('scholarships')
-		.where('application', 'array-contains', '')
+		.where('course_level', '==', 'All levels')
 		.get();
 
 	snapshot.docs.forEach(async (doc) => {
 		const docRef = db.collection('scholarships').doc(doc.id);
 		await docRef.update({
-			application: admin.firestore.FieldValue.arrayRemove('')
+			// application: admin.firestore.FieldValue.arrayRemove('')
+			course_level: 'All Levels'
+			// field_of_study: 'All Fields'
 		});
 	});
 }

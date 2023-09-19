@@ -36,7 +36,7 @@
 					Don’t have an account yet? <a
 						href="/signup"
 						class="font-medium text-primary-600 hover:underline dark:text-primary-500"
-						>Create account</a
+						>Create an account</a
 					>
 				</p>
 			</form>

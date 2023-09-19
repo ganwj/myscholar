@@ -4,7 +4,11 @@
 	border-radius: 0.25rem;
 	cursor: pointer;
 	font-size: 0.8rem;
-	background-color: #f4f4f5;
+	background-color: #f3f4f6 !important;
+}
+
+.ais-Dropdown {
+	margin-bottom: 1rem;
 }
 
 .ais-Dropdown-button--refined {
@@ -12,15 +16,7 @@
 }
 
 .ais-Dropdown-button:hover {
-	background-color: #e4e4e7;
-}
-
-.ais-Dropdown .ais-Panel-body > div > div[class^='ais-'] {
-	border: 1px solid #ccc;
-	border-radius: 0.25rem;
-	padding: 0.5rem 1rem;
-	margin-top: 0.5rem;
-	background-color: #fff;
+	background-color: #e5e7eb !important;
 }
 
 .ais-Dropdown .ais-Panel-header {
@@ -35,28 +31,73 @@
 
 .ais-Dropdown--opened .ais-Panel-body {
 	display: block;
-	z-index: 10;
 }
 
 .ais-Dropdown .ais-Panel-body {
-	position: relative;
+	position: absolute;
 }
 
 .ais-Dropdown-close {
 	display: none;
 }
 
+.ais-Dropdown--opened .ais-Panel-body {
+	margin-top: 0.5rem;
+}
+
+// Refinement List CSS
+
 .ais-RefinementList {
 	overflow: auto;
+}
+
+.ais-Dropdown--opened .ais-Panel-body {
+	z-index: 10;
+	overflow: auto;
 	max-height: 17rem;
-	max-width: 28rem;
+	max-width: 24rem;
 }
 
 .ais-RefinementList-item--selected .ais-RefinementList-checkbox {
-	color: #f0fdfa;
+	color: #374151;
+}
+
+#institution .ais-Dropdown .ais-Panel-body > div > div[class^='ais-'],
+#course .ais-Dropdown .ais-Panel-body > div > div[class^='ais-'] {
+	border: 1px solid #ccc;
+	border-radius: 0.25rem;
+	padding: 0.5rem 1rem;
+	background-color: #fff;
+}
+
+// Clear Refinements CSS
+
+.ais-ClearRefinements {
+}
+
+.ais-ClearRefinements-button {
+	padding: 0.75rem 1.25rem;
+	border-radius: 0.25rem;
+	cursor: pointer !important;
+	font-size: 0.8rem;
+}
+
+.ais-ClearRefinements-button--disabled {
+	cursor: default !important;
 }
 
 /* mobile */
+@media (max-width: 640px) {
+	.ais-Dropdown--opened .ais-Panel-body {
+		width: 60%;
+	}
+
+	#institution .ais-Dropdown--opened .ais-Panel-body,
+	#course .ais-Dropdown--opened .ais-Panel-body {
+		width: 90%;
+	}
+}
+
 /* @media only screen and (max-width: 375px) {
 	body {
 		overflow: hidden;
