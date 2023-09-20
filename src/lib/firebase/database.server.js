@@ -107,3 +107,11 @@ export async function createProfile(profile, userId) {
 		{ merge: true }
 	);
 }
+
+/**
+ * @param {string} userId
+ */
+export async function getUser(userId) {
+	const user = await db.collection('users').doc(userId).get();
+	return user?.data();
+}

@@ -9,6 +9,10 @@
 	 * @type {string}
 	 */
 	export let text;
+	/**
+	 * @type {any}
+	 */
+	export let user;
 	let submitting = false;
 
 	$: if (form && form.success === false) {
@@ -20,130 +24,57 @@
 	}
 
 	let levels = [
-		{
-			id: 1,
-			text: 'Pre-University'
-		},
-		{
-			id: 2,
-			text: 'Foundation'
-		},
-		{
-			id: 3,
-			text: 'Diploma'
-		},
-		{
-			id: 4,
-			text: 'Undergraduate Degree'
-		},
-		{
-			id: 5,
-			text: 'Postgraduate'
-		},
-		{
-			id: 6,
-			text: 'Masters'
-		},
-		{
-			id: 7,
-			text: 'PhD'
-		}
+		'Pre-University',
+		'Foundation',
+		'Diploma',
+		'Undergraduate Degree',
+		'Postgraduate',
+		'Masters',
+		'PhD'
 	];
-	let countries = [
-		{
-			id: 1,
-			text: 'Local'
-		},
-		{
-			id: 2,
-			text: 'Overseas'
-		}
-	];
+	let countries = ['Local', 'Overseas'];
 	let programs = [
-		{
-			id: 1,
-			text: 'ACCA'
-		},
-		{
-			id: 2,
-			text: 'A-Levels'
-		},
-		{
-			id: 3,
-			text: 'Accounting'
-		},
-		{
-			id: 4,
-			text: 'Business'
-		},
-		{
-			id: 5,
-			text: 'Communication'
-		},
-		{
-			id: 6,
-			text: 'Dentistry'
-		},
-		{
-			id: 7,
-			text: 'Design'
-		},
-		{
-			id: 8,
-			text: 'Education'
-		},
-		{
-			id: 9,
-			text: 'Engineering'
-		},
-		{
-			id: 10,
-			text: 'Foundatiom'
-		},
-		{
-			id: 11,
-			text: 'Foundation in Arts'
-		},
-		{
-			id: 12,
-			text: 'Foundation in Business'
-		},
-		{
-			id: 13,
-			text: 'Foundation in Science'
-		},
-		{
-			id: 14,
-			text: 'Information Technology'
-		},
-		{
-			id: 15,
-			text: 'Law'
-		},
-		{
-			id: 16,
-			text: 'MBBS'
-		},
-		{
-			id: 17,
-			text: 'Medicine'
-		},
-		{
-			id: 18,
-			text: 'Nursing'
-		},
-		{
-			id: 19,
-			text: 'Pharmacy'
-		},
-		{
-			id: 20,
-			text: 'Software Engineering'
-		},
-		{
-			id: 21,
-			text: 'Psychology'
-		}
+		'ACCA',
+
+		'A-Levels',
+
+		'Accounting',
+
+		'Business',
+
+		'Communication',
+
+		'Dentistry',
+
+		'Design',
+
+		'Education',
+
+		'Engineering',
+
+		'Foundation',
+
+		'Foundation in Arts',
+
+		'Foundation in Business',
+
+		'Foundation in Science',
+
+		'Information Technology',
+
+		'Law',
+
+		'MBBS',
+
+		'Medicine',
+
+		'Nursing',
+
+		'Pharmacy',
+
+		'Software Engineering',
+
+		'Psychology'
 	];
 </script>
 
@@ -164,6 +95,7 @@
 				id="name"
 				name="name"
 				class:is-invalid={form?.error_name}
+				value={user.hasProfile ? user.name : ''}
 				class="
                     border rounded h-12 pl-4
                     text-gray-900 text-base
@@ -184,6 +116,7 @@
 				id="email"
 				name="email"
 				class:is-invalid={form?.error_email}
+				value={user.hasProfile ? user.email : ''}
 				class="
                     border rounded h-12 pl-4
                     text-gray-900 text-base
@@ -202,6 +135,7 @@
 			<select
 				id="program"
 				name="program"
+				value={user.hasProfile ? user.program : ''}
 				class="
                     border rounded h-12 pl-4
                     text-gray-900 text-base
@@ -212,7 +146,7 @@
                 "
 			>
 				{#each programs as program}
-					<option value={program}>{program.text}</option>
+					<option value={program}>{program}</option>
 				{/each}
 			</select>
 		</div>
@@ -221,6 +155,7 @@
 			<select
 				id="level"
 				name="level"
+				value={user.hasProfile ? user.level : ''}
 				class="
                     border rounded h-12 pl-4
                     text-gray-900 text-base
@@ -231,7 +166,7 @@
                 "
 			>
 				{#each levels as level}
-					<option value={level}>{level.text}</option>
+					<option value={level}>{level}</option>
 				{/each}
 			</select>
 		</div>
@@ -240,6 +175,7 @@
 			<select
 				id="country"
 				name="country"
+				value={user.hasProfile ? user.country : ''}
 				class="
                     border rounded h-12 pl-4
                     text-gray-900 text-base
@@ -250,7 +186,7 @@
                 "
 			>
 				{#each countries as country}
-					<option value={country}>{country.text}</option>
+					<option value={country}>{country}</option>
 				{/each}
 			</select>
 		</div>
@@ -259,7 +195,7 @@
 				disabled={submitting}
 				type="submit"
 				class="text-center rounded focus:outline-none focus:ring whitespace-nowrap bg-primary-700 text-white hover:bg-primary-800 active:bg-primary-800 disabled:bg-primary-600 disabled:text-white disabled:cursor-not-allowed text-base h-12 leading-[3rem] px-8 grow basis-1/2"
-				>Create profile</button
+				>{text === 'Create profile' ? text : 'Update profile'}</button
 			>
 		</div>
 	</form>

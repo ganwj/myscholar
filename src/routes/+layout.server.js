@@ -1,6 +1,13 @@
+import { getUser } from '$lib/firebase/database.server';
+
 // @ts-ignore
 export function load({ locals }) {
-	return {
-		isLoggedIn: locals.user !== null
-	};
+	if (locals.user) {
+		const user = getUser(locals.user.id) || null;
+
+		return {
+			isLoggedIn: locals.user !== null,
+			user
+		};
+	}
 }

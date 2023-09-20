@@ -1,6 +1,15 @@
-import { createProfile } from '$lib/firebase/database.server';
+import { createProfile, getUser } from '$lib/firebase/database.server';
 import validateProfile from '$lib/validators/profile.validator';
 import { fail, redirect } from '@sveltejs/kit';
+
+// @ts-ignore
+export async function load({ locals }) {
+	const user = await getUser(locals.user.id);
+
+	return {
+		user
+	};
+}
 
 export const actions = {
 	// @ts-ignore

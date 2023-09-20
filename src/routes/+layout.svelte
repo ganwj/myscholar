@@ -52,7 +52,7 @@
 
 <div class="flex min-h-screen w-full flex-col space-y-2">
 	<div class="w-full flex-none">
-		<Nav {isLoggedIn} />
+		<Nav {isLoggedIn} user={data.user} />
 	</div>
 	<div class="w-full flex-auto">
 		{#if $messagesStore.show}

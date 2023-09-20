@@ -12,6 +12,10 @@
 	let navClass = 'border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800';
 	let navDivClass = 'flex flex-wrap justify-between items-center mx-auto max-w-screen-xl';
 	export let isLoggedIn = false;
+	/**
+	 * @type {any}
+	 */
+	export let user;
 
 	async function onLogOut() {
 		try {
@@ -40,7 +44,7 @@
 		/>
 		<NavUl {activeUrl} {hidden} {activeClass} {nonActiveClass}>
 			<NavLi href="/">Home</NavLi>
-			<NavLi href="/profile">Profile</NavLi>
+			<NavLi href={user && user.hasProfile ? '/profile' : '/profile/edit'}>Profile</NavLi>
 			<NavLi href="/scholarships">Scholarships</NavLi>
 			<NavLi class="cursor-pointer md:text-gray-500" on:click={onLogOut}>Log out</NavLi>
 		</NavUl>

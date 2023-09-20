@@ -15,19 +15,15 @@ export default async function validateProfile(formData) {
 	try {
 		await schema.validate(data, { abortEarly: false });
 
-		const program = formData.get('program');
-		const level = formData.get('level');
-		const country = formData.get('country');
-
-		const newData = {
+		const profileData = {
 			...data,
-			program: { ...program },
-			level: { ...level },
-			country: { ...country },
+			program: formData.get('program'),
+			level: formData.get('level'),
+			country: formData.get('country'),
 			hasProfile: true
 		};
 
-		return { success: true, profile: newData };
+		return { success: true, profile: profileData };
 	} catch (error) {
 		const errors = error.inner.reduce((agg, e) => {
 			if (!agg['error_' + e.path]) {
