@@ -50,22 +50,26 @@
 	}
 </script>
 
-<Nav {isLoggedIn} />
-<div class="container mx-auto">
-	{#if $messagesStore.show}
-		{#if $messagesStore.type === 'error'}
-			<Alert class="mt-4 w-9/12 mx-auto" color="red" dismissable on:close={closeMessage}>
-				<ExclamationCircleSolid slot="icon" class="w-4 h-4" />
-				<span class="font-medium">Error: </span>
-				{$messagesStore.message}
-			</Alert>
-		{:else if $messagesStore.type === 'success'}
-			<Alert class="mt-4 w-9/12 mx-auto" color="green" dismissable on:close={closeMessage}>
-				<CheckCircleSolid slot="icon" class="w-4 h-4" />
-				<span class="font-medium">Success: </span>
-				{$messagesStore.message}
-			</Alert>
+<div class="flex min-h-screen w-full flex-col space-y-2">
+	<div class="w-full flex-none">
+		<Nav {isLoggedIn} />
+	</div>
+	<div class="w-full flex-auto">
+		{#if $messagesStore.show}
+			{#if $messagesStore.type === 'error'}
+				<Alert class="mt-4 w-9/12 mx-auto" color="red" dismissable on:close={closeMessage}>
+					<ExclamationCircleSolid slot="icon" class="w-4 h-4" />
+					<span class="font-medium">Error: </span>
+					{$messagesStore.message}
+				</Alert>
+			{:else if $messagesStore.type === 'success'}
+				<Alert class="mt-4 w-9/12 mx-auto" color="green" dismissable on:close={closeMessage}>
+					<CheckCircleSolid slot="icon" class="w-4 h-4" />
+					<span class="font-medium">Success: </span>
+					{$messagesStore.message}
+				</Alert>
+			{/if}
 		{/if}
-	{/if}
-	<slot />
+		<slot />
+	</div>
 </div>

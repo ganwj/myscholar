@@ -1,6 +1,6 @@
 import { PUBLIC_PAGE_SIZE } from '$env/static/public';
 import { db } from '$lib/firebase/firebase.server';
-import admin from 'firebase-admin';
+
 // @ts-ignore
 export async function saveScholarship(scholarship) {
 	const collection = db.collection('scholarships');
@@ -90,4 +90,20 @@ export async function getScholarship(id) {
 	if (ref.exists) {
 		return { id: ref.id, ...ref.data() };
 	}
+}
+
+/**
+ * @param {any} profile
+ * @param {string} userId
+ */
+export async function createProfile(profile, userId) {
+	const collection = await db.collection('users');
+
+	const ref = await collection.doc(userId);
+	await ref.set(
+		{
+			...profile
+		},
+		{ merge: true }
+	);
 }
