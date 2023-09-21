@@ -45,7 +45,7 @@
 	margin-top: 0.5rem;
 }
 
-// Refinement List CSS
+/* Refinement List CSS */
 
 .ais-RefinementList {
 	overflow: auto;
@@ -70,7 +70,7 @@
 	background-color: #fff;
 }
 
-// Clear Refinements CSS
+/* Clear Refinements CSS */
 
 .ais-ClearRefinements-button {
 	padding: 0.75rem 1.25rem;

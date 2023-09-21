@@ -2,7 +2,7 @@
 	class="mx-auto flex items-center justify-center w-8/12 gap-12 py-10 flex-col md:gap-14 md:mt-20 lg:mt-14 lg:flex-row lg:gap-20"
 >
 	<div>
-		<h1 class="font-bold text-2xl">Welcome to MyScholars</h1>
+		<h1 class="font-bold text-2xl">Welcome to MyScholar</h1>
 		<p class="mt-10">
 			MyScholar is a platform designed to offer a unified and all-inclusive resource for Malaysian
 			students seeking information on a wide range of scholarships for their educational pursuits.
