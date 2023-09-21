@@ -24,7 +24,6 @@
 	role="button"
 	class="bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-lg border border-gray-200 dark:border-gray-700 divide-gray-200 dark:divide-gray-700 shadow-md flex max-w-sm flex-col hover:bg-gray-100 dark:hover:bg-gray-700 p-4 sm:p-6 horizontal reverse=false relative items-center mb-8 md:grid md:grid-cols-3 md:max-w-2xl"
 >
-	"
 	<div class="image-box mt-8 md:col-span-1 md:mt-0">
 		<div class="flex items-center justify-center">
 			<img src={scholarship.imageURL} alt="Institution logo" class="w-full" />
