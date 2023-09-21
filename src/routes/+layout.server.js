@@ -1,13 +1,15 @@
 import { getUser } from '$lib/firebase/database.server';
 
 // @ts-ignore
-export function load({ locals }) {
-	if (locals.user) {
-		const user = getUser(locals.user.id) || null;
+export async function load({ locals }) {
+	let user;
 
-		return {
-			isLoggedIn: locals.user !== null,
-			user
-		};
+	if (locals.user) {
+		user = await getUser(locals.user.id);
 	}
+
+	return {
+		isLoggedIn: locals.user !== null,
+		user
+	};
 }

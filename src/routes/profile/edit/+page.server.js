@@ -1,15 +1,7 @@
-import { createProfile, getUser } from '$lib/firebase/database.server';
+import { createProfile } from '$lib/firebase/database.server';
+import messagesStore from '$lib/stores/messages.store';
 import validateProfile from '$lib/validators/profile.validator';
 import { fail, redirect } from '@sveltejs/kit';
-
-// @ts-ignore
-export async function load({ locals }) {
-	const user = await getUser(locals.user.id);
-
-	return {
-		user
-	};
-}
 
 export const actions = {
 	// @ts-ignore
@@ -19,7 +11,12 @@ export const actions = {
 		if (!data.success) {
 			return fail(422, data);
 		}
-		createProfile(data.profile, locals.user.id);
-		throw redirect(303, '/profile');
+
+		if (locals.user) {
+			createProfile(data.profile, locals.user.id);
+			throw redirect(303, '/profile/pa');
+		} else {
+			messagesStore.showError('Something is wrong. Please sign out and try again.');
+		}
 	}
 };

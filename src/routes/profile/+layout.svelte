@@ -1,6 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 
+	export let data;
 	$: activeUrl = $page.url.pathname;
 </script>
 
@@ -13,13 +14,15 @@
 					<ul class="pb-8">
 						<li class="group px-6">
 							<a
-								href="/profile"
-								class={activeUrl.indexOf('/profile') > -1
+								href={data.user && data.user.hasProfile ? '/profile/pa' : '/profile/edit'}
+								class={activeUrl.indexOf('/profile/pa') > -1 ||
+								activeUrl.indexOf('/profile/edit') > -1
 									? 'text-sm font-bold text-primary-700'
 									: 'text-sm hover:underline'}
 							>
 								<span
-									class={activeUrl.indexOf('/profile') > -1
+									class={activeUrl.indexOf('/profile/pa') > -1 ||
+									activeUrl.indexOf('/profile/edit') > -1
 										? 'block pb-2 pt-4 border-b-2 border-primary-700'
 										: 'block pb-2 pt-4 border-b border-gray-200'}>Profile</span
 								>
@@ -27,13 +30,13 @@
 						</li>
 						<li class="group px-6">
 							<a
-								href="/scholarships"
-								class={activeUrl === '/scholarships'
+								href="/profile/scholarships"
+								class={activeUrl === '/profile/scholarships'
 									? 'text-sm font-bold text-primary-700'
 									: 'text-sm hover:underline'}
 							>
 								<span
-									class={activeUrl === '/scholarships'
+									class={activeUrl === '/profile/scholarships'
 										? 'block pb-2 pt-4 border-b-2 border-primary-700'
 										: 'block pb-2 pt-4 border-b border-gray-200'}>My scholarships</span
 								>
@@ -46,13 +49,15 @@
 				<div class="flex grow justify-between border-b border-b-gray-100">
 					<div class="flex-1 text-center">
 						<a
-							href="/profile"
-							class={activeUrl.indexOf('/profile') > -1
+							href={data.user && data.user.hasProfile ? '/profile/pa' : '/profile/edit'}
+							class={activeUrl.indexOf('/profile/pa') > -1 ||
+							activeUrl.indexOf('/profile/edit') > -1
 								? 'text-sm font-bold text-primary-700'
 								: 'text-sm hover:underline'}
 						>
 							<span
-								class={activeUrl.indexOf('/profile') > -1
+								class={activeUrl.indexOf('/profile/pa') > -1 ||
+								activeUrl.indexOf('/profile/edit') > -1
 									? 'flex justify-center pb-2 pt-4 border-b-2 border-primary-700'
 									: 'flex justify-center pb-2 pt-4 border-gray-200'}>Profile</span
 							>
@@ -60,13 +65,13 @@
 					</div>
 					<div class="flex-1 text-center">
 						<a
-							href="/scholarships"
-							class={activeUrl === '/scholarships'
+							href="/profile/scholarships"
+							class={activeUrl === '/profile/scholarships'
 								? 'text-sm font-bold text-primary-700'
 								: 'text-sm hover:underline'}
 						>
 							<span
-								class={activeUrl === '/scholarships'
+								class={activeUrl === '/profile/scholarships'
 									? 'flex justify-center pb-2 pt-4 border-b-2 border-primary-700'
 									: 'flex justify-center pb-2 pt-4 border-gray-200'}>My scholarships</span
 							>

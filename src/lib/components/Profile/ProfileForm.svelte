@@ -6,10 +6,6 @@
 	 */
 	export let form;
 	/**
-	 * @type {string}
-	 */
-	export let text;
-	/**
 	 * @type {any}
 	 */
 	export let user;
@@ -32,7 +28,7 @@
 		'Masters',
 		'PhD'
 	];
-	let countries = ['Local', 'Overseas'];
+	let countries = ['Malaysia', 'Overseas'];
 	let programs = [
 		'ACCA',
 
@@ -79,7 +75,7 @@
 </script>
 
 <div id="main" class="lg:flex-1 lg:max-w-md lg:pb-14 lg:pt-10 p-4">
-	<h2 class="text-lg font-bold mb-10">{text}</h2>
+	<h2 class="text-lg font-bold mb-10">{user.hasProfile ? 'Edit profile' : 'Create profile'}</h2>
 	<form
 		method="post"
 		use:enhance
@@ -195,8 +191,8 @@
 				disabled={submitting}
 				type="submit"
 				class="text-center rounded focus:outline-none focus:ring whitespace-nowrap bg-primary-700 text-white hover:bg-primary-800 active:bg-primary-800 disabled:bg-primary-600 disabled:text-white disabled:cursor-not-allowed text-base h-12 leading-[3rem] px-8 grow basis-1/2"
-				>{text === 'Create profile' ? text : 'Update profile'}</button
-			>
+				>{user.hasProfile ? 'Update profile' : 'Create profile'}
+			</button>
 		</div>
 	</form>
 </div>

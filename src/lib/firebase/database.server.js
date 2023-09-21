@@ -1,5 +1,7 @@
 import { PUBLIC_PAGE_SIZE } from '$env/static/public';
 import { db } from '$lib/firebase/firebase.server';
+import { error } from '@sveltejs/kit';
+import admin from 'firebase-admin';
 
 // @ts-ignore
 export async function saveScholarship(scholarship) {
@@ -81,16 +83,50 @@ export async function showAllScholarships(page = 1) {
 }
 
 /**
- * @param {string} id
+ * @param {string} scholarshipId
  * @return {Promise<any>}
  */
-export async function getScholarship(id) {
-	const ref = await db.collection('scholarships').doc(id).get();
+export async function getScholarship(scholarshipId, userId = null) {
+	const ref = await db.collection('scholarships').doc(scholarshipId).get();
 
 	if (ref.exists) {
-		return { id: ref.id, ...ref.data() };
+		const user = userId !== null ? await getUser(userId) : null;
+		const savedScholarship = user?.scholarshipIds?.includes(scholarshipId) || false;
+
+		return { id: ref.id, ...ref.data(), savedScholarship };
 	}
 }
+
+// /**
+//  * @param {string} scholarshipId
+//  * @param {string} userId
+//  */
+// export async function toggleSaveScholarship(scholarshipId, userId) {
+// 	const userDoc = db.collection('users').doc(userId);
+
+// 	const user = await userDoc.get();
+// 	const userData = user.data();
+
+// 	if (userData) {
+// 		// unsave the scholarship
+// 		if (userData.scholarshipIds && userData.scholarshipIds.includes(scholarshipId)) {
+// 			await userDoc.update({
+// 				scholarshipIds: admin.firestore.FieldValue.arrayRemove(scholarshipId)
+// 			});
+// 		}
+// 		// save the scholarship
+// 		else {
+// 			await userDoc.update({
+// 				scholarshipIds: admin.firestore.FieldValue.arrayUnion(scholarshipId)
+// 			});
+// 		}
+
+// 		// @ts-ignore
+// 		return await getScholarship(scholarshipId, userId);
+// 	} else {
+// 		throw error(404, 'User not found!');
+// 	}
+// }
 
 /**
  * @param {any} profile
@@ -114,4 +150,74 @@ export async function createProfile(profile, userId) {
 export async function getUser(userId) {
 	const user = await db.collection('users').doc(userId).get();
 	return user?.data();
+}
+
+/**
+ * @param {string} userId
+ */
+export async function getPersonalizedScholarships(userId, page = 1) {
+	const user = await db.collection('users').doc(userId).get();
+	// @ts-ignore
+	const country = user.data().country;
+	// @ts-ignore
+	const level = user.data().level;
+	// @ts-ignore
+	const program = user.data().program;
+
+	let scholarshipCount;
+	let snapshot;
+
+	if (country === 'Malaysia') {
+		snapshot = await db
+			.collection('scholarships')
+			.where('country', '==', 'Malaysia')
+			.where('course_level', 'in', [level, 'All Levels'])
+			.where('field_of_study', 'in', [program, 'All Fields'])
+			.limit(+PUBLIC_PAGE_SIZE)
+			.offset((page - 1) * +PUBLIC_PAGE_SIZE)
+			.orderBy('name', 'asc')
+			.get();
+
+		scholarshipCount = await db
+			.collection('scholarships')
+			.where('country', '==', 'Malaysia')
+			.where('course_level', 'in', [level, 'All Levels'])
+			.where('field_of_study', 'in', [program, 'All Fields'])
+			.count()
+			.get();
+	} else {
+		snapshot = await db
+			.collection('scholarships')
+			.where('country', '!=', 'Malaysia')
+			.where('course_level', 'in', [level, 'All Levels'])
+			.where('field_of_study', 'in', [program, 'All Fields'])
+			.limit(+PUBLIC_PAGE_SIZE)
+			.offset((page - 1) * +PUBLIC_PAGE_SIZE)
+			.orderBy('name', 'asc')
+			.get();
+
+		scholarshipCount = await db
+			.collection('scholarships')
+			.where('country', '!=', 'Malaysia')
+			.where('course_level', 'in', [level, 'All Levels'])
+			.where('field_of_study', 'in', [program, 'All Fields'])
+			.count()
+			.get();
+	}
+
+	const totalScholarships = await scholarshipCount.data().count;
+	const totalPages = Math.ceil(totalScholarships / +PUBLIC_PAGE_SIZE);
+
+	const scholarships = snapshot.docs.map((doc) => {
+		return {
+			id: doc.id,
+			...doc.data()
+		};
+	});
+
+	return {
+		scholarships,
+		totalPages,
+		totalScholarships
+	};
 }

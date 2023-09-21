@@ -5,9 +5,5 @@
 </script>
 
 {#if data.user}
-	{#if data.user.hasProfile}
-		<ProfileForm text="Edit profile" user={data.user} {form} />
-	{:else}
-		<ProfileForm text="Create profile" user={data.user} {form} />
-	{/if}
+	<ProfileForm user={data.user} {form} />
 {/if}

@@ -11,7 +11,7 @@
 </script>
 
 <Card
-	href="/scholarships/scholarship-detail/{scholarship.id}"
+	href="/scholarship-detail/{scholarship.id}"
 	class="horizontal reverse={hcard} relative items-center mb-8 md:grid md:grid-cols-3 md:max-w-2xl"
 >
 	<div class="image-box mt-8 md:col-span-1 md:mt-0">
@@ -24,7 +24,7 @@
 			<span>No Interview</span>
 		</div>
 	{/if}
-	<div class="scholarship-detail md:col-span-2 md:ml-10">
+	<div class="scholarship-detail md:col-span-2 md:ml-12">
 		<h3 class="mb-2 text-lg font-bold text-gray-700 mt-5 dark:text-white md:mt-0">
 			{scholarship.name}
 		</h3>

@@ -72,9 +72,6 @@
 
 // Clear Refinements CSS
 
-.ais-ClearRefinements {
-}
-
 .ais-ClearRefinements-button {
 	padding: 0.75rem 1.25rem;
 	border-radius: 0.25rem;
@@ -87,6 +84,7 @@
 }
 
 /* mobile */
+
 @media (max-width: 640px) {
 	.ais-Dropdown--opened .ais-Panel-body {
 		width: 60%;
