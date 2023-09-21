@@ -97,36 +97,36 @@ export async function getScholarship(scholarshipId, userId = null) {
 	}
 }
 
-// /**
-//  * @param {string} scholarshipId
-//  * @param {string} userId
-//  */
-// export async function toggleSaveScholarship(scholarshipId, userId) {
-// 	const userDoc = db.collection('users').doc(userId);
+/**
+ * @param {string} scholarshipId
+ * @param {string} userId
+ */
+export async function toggleSaveScholarship(scholarshipId, userId) {
+	const userDoc = db.collection('users').doc(userId);
 
-// 	const user = await userDoc.get();
-// 	const userData = user.data();
+	const user = await userDoc.get();
+	const userData = user.data();
 
-// 	if (userData) {
-// 		// unsave the scholarship
-// 		if (userData.scholarshipIds && userData.scholarshipIds.includes(scholarshipId)) {
-// 			await userDoc.update({
-// 				scholarshipIds: admin.firestore.FieldValue.arrayRemove(scholarshipId)
-// 			});
-// 		}
-// 		// save the scholarship
-// 		else {
-// 			await userDoc.update({
-// 				scholarshipIds: admin.firestore.FieldValue.arrayUnion(scholarshipId)
-// 			});
-// 		}
+	if (userData) {
+		// unsave the scholarship
+		if (userData.scholarshipIds && userData.scholarshipIds.includes(scholarshipId)) {
+			await userDoc.update({
+				scholarshipIds: admin.firestore.FieldValue.arrayRemove(scholarshipId)
+			});
+		}
+		// save the scholarship
+		else {
+			await userDoc.update({
+				scholarshipIds: admin.firestore.FieldValue.arrayUnion(scholarshipId)
+			});
+		}
 
-// 		// @ts-ignore
-// 		return await getScholarship(scholarshipId, userId);
-// 	} else {
-// 		throw error(404, 'User not found!');
-// 	}
-// }
+		// @ts-ignore
+		return await getScholarship(scholarshipId, userId);
+	} else {
+		throw error(404, 'User not found!');
+	}
+}
 
 /**
  * @param {any} profile
@@ -156,13 +156,13 @@ export async function getUser(userId) {
  * @param {string} userId
  */
 export async function getPersonalizedScholarships(userId, page = 1) {
-	const user = await db.collection('users').doc(userId).get();
+	const user = await getUser(userId);
 	// @ts-ignore
-	const country = user.data().country;
+	const country = user.country;
 	// @ts-ignore
-	const level = user.data().level;
+	const level = user.level;
 	// @ts-ignore
-	const program = user.data().program;
+	const program = user.program;
 
 	let scholarshipCount;
 	let snapshot;
@@ -209,9 +209,12 @@ export async function getPersonalizedScholarships(userId, page = 1) {
 	const totalPages = Math.ceil(totalScholarships / +PUBLIC_PAGE_SIZE);
 
 	const scholarships = snapshot.docs.map((doc) => {
+		const savedScholarship = user?.scholarshipIds?.includes(doc.id) || false;
+
 		return {
 			id: doc.id,
-			...doc.data()
+			...doc.data(),
+			savedScholarship
 		};
 	});
 
@@ -220,4 +223,27 @@ export async function getPersonalizedScholarships(userId, page = 1) {
 		totalPages,
 		totalScholarships
 	};
+}
+
+/**
+ * @param {string} userId
+ * @returns {Promise<any>}
+ */
+export async function getSavedScholarships(userId) {
+	const user = await getUser(userId);
+
+	const scholarshipIds = user?.scholarshipIds || [];
+
+	if (scholarshipIds.length === 0) {
+		return [];
+	}
+
+	const scholarships = await db
+		.collection('scholarships')
+		.where(admin.firestore.FieldPath.documentId(), 'in', scholarshipIds)
+		.get();
+
+	return scholarships.docs.map((d) => {
+		return { id: d.id, ...d.data(), savedScholarship: true };
+	});
 }

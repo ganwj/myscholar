@@ -29,7 +29,7 @@
 
 <Navbar let:hidden let:toggle {navClass} {navDivClass}>
 	<NavBrand href="/">
-		<img src="/logo.png" class="mr-3 h-9 sm:h-10" alt="MyScholar Logo" />
+		<img src="/logo.png" class="mr-3 h-9 sm:h-10" alt="MyScholar logo" />
 		<span class="self-center whitespace-nowrap text-xl font-semibold">MyScholar</span>
 	</NavBrand>
 	{#if !isLoggedIn}

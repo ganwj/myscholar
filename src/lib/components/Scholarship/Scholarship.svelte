@@ -3,17 +3,28 @@
 	import { BookSolid } from 'flowbite-svelte-icons';
 	import { StairsSolid } from 'svelte-awesome-icons';
 	import { P } from 'flowbite-svelte';
+	import Save from './Save.svelte';
+	import { goto } from '$app/navigation';
 	/**
 	 * @type {any}
 	 */
 	export let scholarship;
 	let hcard = false;
+
+	async function clicked() {
+		await goto('/scholarship-detail/' + scholarship.id);
+	}
 </script>
 
-<Card
-	href="/scholarship-detail/{scholarship.id}"
-	class="horizontal reverse={hcard} relative items-center mb-8 md:grid md:grid-cols-3 md:max-w-2xl"
+<!-- svelte-ignore a11y-positive-tabindex -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-interactive-supports-focus -->
+<div
+	on:click={clicked}
+	role="button"
+	class="bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-lg border border-gray-200 dark:border-gray-700 divide-gray-200 dark:divide-gray-700 shadow-md flex max-w-sm flex-col hover:bg-gray-100 dark:hover:bg-gray-700 p-4 sm:p-6 horizontal reverse=false relative items-center mb-8 md:grid md:grid-cols-3 md:max-w-2xl"
 >
+	"
 	<div class="image-box mt-8 md:col-span-1 md:mt-0">
 		<div class="flex items-center justify-center">
 			<img src={scholarship.imageURL} alt="Institution logo" class="w-full" />
@@ -49,7 +60,8 @@
 			</div>
 		</div>
 	</div>
-</Card>
+	<Save {scholarship} on:save_scholarship />
+</div>
 
 <style>
 	.interview-info {

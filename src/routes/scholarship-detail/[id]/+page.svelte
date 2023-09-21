@@ -1,4 +1,5 @@
 <script>
+	import Save from '$lib/components/Scholarship/Save.svelte';
 	import { Button } from 'flowbite-svelte';
 	import {
 		BookOutline,
@@ -104,6 +105,9 @@
 					<span>Field of Study:</span>
 				</div>
 				<span>{data.scholarship.field_of_study}</span>
+			</div>
+			<div class="mt-0 w-10/12 -ml-5 md:w-5/12 md:mt-7 lg:w-4/12">
+				<Save scholarship={data.scholarship} />
 			</div>
 		</div>
 		<section class="criteria mb-8">
