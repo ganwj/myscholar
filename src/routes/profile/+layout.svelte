@@ -1,13 +1,8 @@
 <script>
 	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
 
 	export let data;
 	$: activeUrl = $page.url.pathname;
-
-	onMount(() => {
-		window.location.reload();
-	});
 </script>
 
 <div class="w-full flex-auto">
