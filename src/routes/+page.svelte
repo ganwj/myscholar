@@ -1,13 +1,3 @@
-<script>
-	import { onMount } from 'svelte';
-
-	onMount(() => {
-		for (let i = 0; i < 1; i++) {
-			window.location.reload();
-		}
-	});
-</script>
-
 <div
 	class="mx-auto flex items-center justify-center w-8/12 my-5 gap-12 py-10 flex-col md:gap-14 md:my-10 lg:flex-row lg:gap-20"
 >
