@@ -30,26 +30,20 @@
 	}
 </script>
 
-{#if scholarship.savedScholarship}
-	<button
-		disabled={submitting}
-		class:not-logged-in={!$authStore.isLoggedin}
-		on:click|stopPropagation={saveScholarship}
-		class="flex items-center justify-center gap-1.5 mt-8 mx-4 self-end shrink py-1 w-4/12 border border-solid !border-gray-400 rounded focus:ring-none whitespace-nowrap bg-white hover:bg-gray-200 disabled:cursor-not-allowed disabled:bg-gray-100 md:col-start-3 md:col-end-4 md:justify-self-end md:mt-0 md:w-6/12"
-		><BookmarkSolid size="sm" class="text-primary-700" /><span class="text-gray-700">Saved</span
-		></button
-	>
-{:else}
-	<button
-		disabled={submitting}
-		on:click|stopPropagation={saveScholarship}
-		class:not-logged-in={!$authStore.isLoggedin}
-		class="flex items-center justify-center gap-1.5 mt-8 mx-4 self-end shrink py-1 w-4/12 border border-solid !border-gray-400 rounded focus:ring-none whitespace-nowrap bg-white hover:bg-gray-200 disabled:cursor-not-allowed disabled:bg-gray-100 md:col-start-3 md:col-end-4 md:justify-self-end md:mt-0 md:w-6/12"
-		><BookmarkOutline size="sm" strokeWidth="1" class="text-primary-700" /><span
-			class="text-gray-700">Save</span
-		></button
-	>
-{/if}
+<button
+	disabled={submitting}
+	class:not-logged-in={!$authStore.isLoggedin}
+	on:click|stopPropagation={saveScholarship}
+	class="flex items-center justify-center gap-1.5 mt-8 mx-4 self-end shrink py-1 w-4/12 border border-solid !border-gray-400 rounded focus:ring-none whitespace-nowrap bg-white hover:bg-gray-200 disabled:cursor-not-allowed disabled:bg-gray-100 md:col-start-3 md:col-end-4 md:justify-self-end md:mt-0 md:w-6/12"
+>
+	{#if scholarship.savedScholarship}
+		<BookmarkSolid size="sm" class="text-primary-700" />
+		<span class="text-gray-700">Saved</span>
+	{:else}
+		<BookmarkOutline size="sm" strokeWidth="1" class="text-primary-700" />
+		<span class="text-gray-700">Save</span>
+	{/if}
+</button>
 
 <style>
 	.not-logged-in {
