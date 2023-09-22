@@ -2,7 +2,9 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		window.location.reload();
+		for (let i = 0; i < 1; i++) {
+			window.location.reload();
+		}
 	});
 </script>
 
