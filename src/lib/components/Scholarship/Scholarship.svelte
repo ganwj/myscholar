@@ -9,7 +9,6 @@
 	 * @type {any}
 	 */
 	export let scholarship;
-	let hcard = false;
 
 	async function clicked() {
 		await goto('/scholarship-detail/' + scholarship.id);

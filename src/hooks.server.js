@@ -10,6 +10,7 @@ export async function handle({ event, resolve }) {
 
 	try {
 		event.locals.user = await getFirebaseUser(event.cookies.get('jwt'));
+		window.location.reload();
 	} catch (error) {
 		event.locals.user = null;
 	}
