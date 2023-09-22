@@ -9,8 +9,11 @@
 	}
 </script>
 
-<div id="main" class="lg:flex-1 lg:max-w-md lg:pb-14 lg:pt-14 lg:pl-32 p-4">
-	<div class="space-y-4 ml-12 mt-5 lg:ml-0 lg:mt-0">
+<div
+	id="main"
+	class="flex justify-center mt-20 max-w-5xl lg:mt-0 lg:flex-1 lg:max-w-md lg:py-14 lg:pl-32"
+>
+	<div class="space-y-4">
 		<div class="relative">
 			<div class="mb-12 flex items-center justify-center">
 				<div
@@ -60,13 +63,13 @@
 				<button
 					type="button"
 					on:click={getPersonalizedScholarships}
-					class="text-center rounded focus:outline-none focus:ring whitespace-nowrap bg-primary-700 text-white hover:bg-primary-800 active:bg-primary-800 disabled:bg-primary-600 disabled:text-white disabled:cursor-not-allowed text-base h-12 leading-[3rem] px-6"
+					class="text-center rounded focus:outline-none focus:ring whitespace-nowrap bg-primary-700 text-white hover:bg-primary-800 active:bg-primary-800 disabled:bg-primary-600 disabled:text-white disabled:cursor-not-allowed text-base h-12 leading-[3rem] px-1"
 					>Get personalized scholarships</button
 				>
 			</div>
 			<a
 				href="/profile/edit"
-				class="absolute right-5 top-0 flex h-10 w-10 items-center justify-center rounded-full lg:-right-20 lg:top-2"
+				class="absolute -right-3 top-0 flex h-10 w-10 items-center justify-center rounded-full lg:-right-20 lg:top-2"
 			>
 				<EditOutline class="w-8 h-8" ariaLabel="Edit profile" strokeWidth="0.75" />
 			</a>
