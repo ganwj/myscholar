@@ -11,7 +11,7 @@
 
 <div
 	id="main"
-	class="flex justify-center mt-20 max-w-5xl lg:mt-0 lg:flex-1 lg:max-w-md lg:py-14 lg:pl-32"
+	class="flex justify-center mt-16 max-w-5xl lg:mt-0 lg:flex-1 lg:max-w-md lg:py-14 lg:pl-32"
 >
 	<div class="space-y-4">
 		<div class="relative">
@@ -63,7 +63,7 @@
 				<button
 					type="button"
 					on:click={getPersonalizedScholarships}
-					class="text-center rounded focus:outline-none focus:ring whitespace-nowrap bg-primary-700 text-white hover:bg-primary-800 active:bg-primary-800 disabled:bg-primary-600 disabled:text-white disabled:cursor-not-allowed text-base h-12 leading-[3rem] px-1"
+					class="text-center rounded focus:outline-none focus:ring whitespace-nowrap bg-primary-700 text-white hover:bg-primary-800 active:bg-primary-800 disabled:bg-primary-600 disabled:text-white disabled:cursor-not-allowed text-base h-12 leading-[3rem] px-4"
 					>Get personalized scholarships</button
 				>
 			</div>
