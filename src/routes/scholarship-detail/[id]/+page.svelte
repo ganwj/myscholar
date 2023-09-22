@@ -217,7 +217,9 @@
 		</section>
 		<Button
 			class="bg-red-800 w-7/12 hover:bg-red-900 focus:ring-0 md:ml-3 md:w-4/12 lg:w-3/12 lg:ml-2"
-			href={data.scholarship.url}>Apply for scholarship</Button
+			href={data.scholarship.url}
+			target="_blank"
+			rel="noopener noreferrer">Apply for scholarship</Button
 		>
 	</div>
 </div>
