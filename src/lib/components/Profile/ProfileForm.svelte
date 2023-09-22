@@ -131,7 +131,7 @@
 			<select
 				id="program"
 				name="program"
-				value={user.hasProfile ? user.program : ''}
+				value={user.hasProfile ? user.program : programs[0]}
 				class="
                     border rounded h-12 pl-4
                     text-gray-900 text-base
@@ -151,7 +151,7 @@
 			<select
 				id="level"
 				name="level"
-				value={user.hasProfile ? user.level : ''}
+				value={user.hasProfile ? user.level : levels[0]}
 				class="
                     border rounded h-12 pl-4
                     text-gray-900 text-base
@@ -171,7 +171,7 @@
 			<select
 				id="country"
 				name="country"
-				value={user.hasProfile ? user.country : ''}
+				value={user.hasProfile ? user.country : countries[0]}
 				class="
                     border rounded h-12 pl-4
                     text-gray-900 text-base
