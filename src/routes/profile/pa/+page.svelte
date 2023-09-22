@@ -9,10 +9,7 @@
 	}
 </script>
 
-<div
-	id="main"
-	class="flex justify-center mt-16 max-w-5xl lg:mt-0 lg:flex-1 lg:max-w-md lg:py-14 lg:pl-32"
->
+<div id="main" class="flex justify-center mt-16 max-w-5xl lg:mt-0 lg:flex-1 lg:max-w-md lg:py-14">
 	<div class="space-y-4">
 		<div class="relative">
 			<div class="mb-12 flex items-center justify-center">
