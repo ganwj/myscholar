@@ -16,7 +16,7 @@
 				<div
 					class="flex h-[3.25rem] w-[3.25rem] items-center justify-center rounded-full bg-white text-green-700 shadow-lg"
 				>
-					{data.user?.name.charAt(0).toUpperCase()}
+					{data.user?.name?.charAt(0).toUpperCase()}
 				</div>
 			</div>
 			<div class="space-y-3">

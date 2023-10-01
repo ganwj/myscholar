@@ -40,6 +40,7 @@
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^3.0.3",
 		"prettier-plugin-svelte": "^3.0.3",
+		"search-insights": "^2.8.3",
 		"style-loader": "^3.3.3",
 		"svelte": "^4.2.0",
 		"svelte-awesome-icons": "^0.6.4",

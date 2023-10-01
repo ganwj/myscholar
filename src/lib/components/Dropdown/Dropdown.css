@@ -58,8 +58,8 @@
 	max-width: 24rem;
 }
 
-.ais-RefinementList-item--selected .ais-RefinementList-checkbox {
-	color: #374151;
+[type='checkbox']:checked {
+	color: currentColor;
 }
 
 #institution .ais-Dropdown .ais-Panel-body > div > div[class^='ais-'],

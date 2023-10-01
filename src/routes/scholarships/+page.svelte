@@ -33,7 +33,8 @@
 		const search = instantsearch({
 			searchClient,
 			indexName: INSTANT_SEARCH_INDEX_NAME,
-			routing: instantSearchRouter
+			routing: instantSearchRouter,
+			insights: true
 		});
 
 		// Mount a virtual search box to manipulate InstantSearch's `query` UI
@@ -367,7 +368,7 @@
 
 		const querySuggestionsPlugin = createQuerySuggestionsPlugin({
 			searchClient,
-			indexName: 'scholarships_query_suggestions',
+			indexName: 'scholarships_new_query_suggestions',
 			getSearchParams() {
 				return recentSearchesPlugin.data.getAlgoliaSearchParams({
 					hitsPerPage: 6
