@@ -1,5 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
+	import { Button } from 'flowbite-svelte';
 	import { EditOutline } from 'flowbite-svelte-icons';
 
 	export let data;
@@ -57,16 +58,13 @@
 				</div>
 			</div>
 			<div class="mt-14">
-				<button
-					type="button"
-					on:click={getPersonalizedScholarships}
-					class="text-center rounded focus:outline-none focus:ring whitespace-nowrap bg-primary-700 text-white hover:bg-primary-800 active:bg-primary-800 disabled:bg-primary-600 disabled:text-white disabled:cursor-not-allowed text-base h-12 leading-[3rem] px-4"
-					>Get personalized scholarships</button
+				<Button on:click={getPersonalizedScholarships} color="primary"
+					>Get personalized scholarships</Button
 				>
 			</div>
 			<a
 				href="/profile/edit"
-				class="absolute -right-3 top-0 flex h-10 w-10 items-center justify-center rounded-full lg:-right-20 lg:top-2"
+				class="absolute -right-3 top-0 flex items-center justify-center lg:-right-20 lg:top-0.5"
 			>
 				<EditOutline class="w-8 h-8" ariaLabel="Edit profile" strokeWidth="0.75" />
 			</a>

@@ -50,7 +50,7 @@
 	}
 </script>
 
-<div class="flex min-h-screen w-full flex-col space-y-2">
+<div class="flex min-h-screen w-full flex-col">
 	<div class="w-full flex-none">
 		<Nav {isLoggedIn} user={data.user} />
 	</div>

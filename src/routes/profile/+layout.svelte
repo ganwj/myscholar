@@ -5,7 +5,7 @@
 	$: activeUrl = $page.url.pathname;
 </script>
 
-<div class="w-full flex-auto">
+<div class="w-full flex-auto mt-2">
 	<main class="mx-auto max-w-5xl">
 		<div class=" lg:gap-10 lg:px-4 lg:flex lg:columns-3">
 			<div class="hidden lg:w-[17.625rem] lg:flex-none lg:block lg:mt-6">
