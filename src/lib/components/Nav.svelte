@@ -46,7 +46,7 @@
 			<NavLi href="/">Home</NavLi>
 			<NavLi href={user && user.hasProfile ? '/profile/pa' : '/profile/edit'}>Profile</NavLi>
 			<NavLi href="/scholarships">Scholarships</NavLi>
-			<NavLi class="cursor-pointer md:text-gray-500" on:click={onLogOut}>Log out</NavLi>
+			<NavLi class="cursor-pointer md:text-gray-600" on:click={onLogOut}>Log out</NavLi>
 		</NavUl>
 	{/if}
 </Navbar>
