@@ -33,8 +33,7 @@
 		const search = instantsearch({
 			searchClient,
 			indexName: INSTANT_SEARCH_INDEX_NAME,
-			routing: instantSearchRouter,
-			insights: true
+			routing: instantSearchRouter
 		});
 
 		// Mount a virtual search box to manipulate InstantSearch's `query` UI
@@ -250,6 +249,8 @@
 			})
 		]);
 
+		search.start();
+
 		// Set the InstantSearch index UI state from external events.
 		function setInstantSearchUiState(indexUiState) {
 			search.setUiState((uiState) => ({
@@ -272,21 +273,12 @@
 
 		const searchPageState = getInstantSearchUiState();
 
-		let skipInstantSearchUiStateUpdate = false;
-
-		// This keeps Autocomplete aware of state changes coming from routing
-		// and updates its query accordingly
-		window.addEventListener('popstate', () => {
-			skipInstantSearchUiStateUpdate = true;
-			setQuery(search.helper?.state.query || '');
-		});
+		/** For recent searches */
 
 		// Build URLs that InstantSearch understands.
 		function getInstantSearchUrl(indexUiState) {
 			return search.createURL({ [INSTANT_SEARCH_INDEX_NAME]: indexUiState });
 		}
-
-		search.start();
 
 		// Detect when an event is modified with a special key to let the browser
 		// trigger its default behavior.
@@ -348,6 +340,8 @@
 							query: item.label
 						});
 					},
+					// Update the default `item` template to wrap it with a link
+					// and plug it to the InstantSearch router.
 					templates: {
 						item(params) {
 							const { children } = source.templates.item(params).props;
@@ -357,14 +351,13 @@
 								children,
 								html: params.html
 							});
-						},
-						noResults() {
-							return 'No results.';
 						}
 					}
 				};
 			}
 		});
+
+		/** For query suggestions */
 
 		const querySuggestionsPlugin = createQuerySuggestionsPlugin({
 			searchClient,
@@ -415,6 +408,7 @@
 			}
 		});
 
+		// Debounce search results
 		function debounce(fn, time) {
 			let timerId = undefined;
 
@@ -429,6 +423,7 @@
 
 		const debouncedSetInstantSearchUiState = debounce(setInstantSearchUiState, 500);
 
+		let skipInstantSearchUiStateUpdate = false;
 		const { setQuery } = autocomplete({
 			container: '#autocomplete',
 			placeholder: 'Search for scholarships',
@@ -450,6 +445,14 @@
 			},
 			openOnFocus: true,
 			plugins: [recentSearchesPlugin, querySuggestionsPlugin]
+		});
+
+		// This keeps Autocomplete aware of state changes coming from routing
+		// and updates its query accordingly
+		window.addEventListener('popstate', () => {
+			location.reload();
+			skipInstantSearchUiStateUpdate = true;
+			setQuery(search.helper?.state.query || '');
 		});
 	});
 </script>
@@ -556,5 +559,5 @@
 <div class="results w-11/12 mx-auto my-8 md:w-full">
 	<div id="stats" class="ml-2 md:ml-12 lg:ml-60"></div>
 	<div id="hits" class="flex flex-col items-center justify-center"></div>
-	<div id="pagination"></div>
+	<div id="pagination" data-sveltekit-reload></div>
 </div>
