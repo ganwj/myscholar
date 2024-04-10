@@ -64,13 +64,15 @@
 						{data.scholarship.name}
 					</h4>
 					<div
-						class="details-awards text-red-800 font-medium mt-10 text-center text-l hidden lg:text-xl lg:block"
+						class="details-awards text-emerald-800 font-medium mt-10 text-center text-l hidden lg:text-xl lg:block"
 					>
 						<span>{data.scholarship.waiver}</span>
 					</div>
 				</div>
 			</div>
-			<div class="details-awards text-red-800 font-semibold mt-10 text-center text-xl lg:hidden">
+			<div
+				class="details-awards text-emerald-800 font-semibold mt-10 text-center text-xl lg:hidden"
+			>
 				<span>{data.scholarship.waiver}</span>
 			</div>
 		</div>
@@ -82,7 +84,7 @@
 					<MapLocationOutline
 						size="sm"
 						strokeWidth="1"
-						class="w-4 h-4 text-red-800 md:w-5 md:h-5"
+						class="w-4 h-4 text-emerald-800 md:w-5 md:h-5"
 					/>
 					<span>Location:</span>
 				</div>
@@ -92,7 +94,7 @@
 				<div
 					class="flex flex-row items-center gap-2 grow-0 shrink-0 basis-4/12 md:basis-3/12 md:gap-3 lg:gap-4"
 				>
-					<LandmarkOutline strokeWidth="1" class="w-4 h-4 text-red-800 md:w-5 md:h-5" />
+					<LandmarkOutline strokeWidth="1" class="w-4 h-4 text-emerald-800 md:w-5 md:h-5" />
 					<span>Course Level:</span>
 				</div>
 				<span>{data.scholarship.course_level}</span>
@@ -101,7 +103,7 @@
 				<div
 					class="flex flex-row items-center gap-2 grow-0 shrink-0 basis-4/12 md:basis-3/12 md:gap-3 lg:gap-4"
 				>
-					<BookOutline strokeWidth="1" class="w-4 h-4 text-red-800 md:w-5 md:h-5" />
+					<BookOutline strokeWidth="1" class="w-4 h-4 text-emerald-800 md:w-5 md:h-5" />
 					<span>Field of Study:</span>
 				</div>
 				<span>{data.scholarship.field_of_study}</span>
@@ -111,7 +113,7 @@
 			</div>
 		</div>
 		<section class="criteria mb-8">
-			<h4 class="font-medium text-3xl text-red-800 mb-2">Criteria</h4>
+			<h4 class="font-medium text-3xl text-emerald-800 mb-2">Criteria</h4>
 			<hr />
 			<div class="mt-5 ml-10 md:ml-14">
 				<ul class="list-disc list-outside">
@@ -123,7 +125,7 @@
 			</div>
 		</section>
 		<section class="highlight mb-8">
-			<h4 class="font-medium text-3xl text-red-800 mb-2">Highlights</h4>
+			<h4 class="font-medium text-3xl text-emerald-800 mb-2">Highlights</h4>
 			<hr />
 			<div class="mt-5 ml-10 md:ml-14">
 				<ul class="list-disc list-outside">
@@ -135,7 +137,7 @@
 			</div>
 		</section>
 		<section class="awards mb-8">
-			<h4 class="font-medium text-3xl text-red-800 mb-2">Awards</h4>
+			<h4 class="font-medium text-3xl text-emerald-800 mb-2">Awards</h4>
 			<hr />
 			<div class="mt-5 ml-10 md:ml-14">
 				<ul class="list-disc list-outside">
@@ -146,21 +148,21 @@
 				</ul>
 			</div>
 			{#if data.scholarship.amount_matching.length > 0}
-				<div class="awards-container mt-8 border border-red-800 relative lg:mt-5">
+				<div class="awards-container mt-8 border border-emerald-800 relative lg:mt-5">
 					<div class="outer-stage overflow-hidden">
 						{#if data.scholarship.amount_matching.length > 1}
 							<ChevronLeftOutline
 								strokeWidth="1"
 								size="xs"
 								role="button"
-								class="text-red-800 absolute top-1/2 left-2.5 z-50"
+								class="text-emerald-800 absolute top-1/2 left-2.5 z-50"
 								on:click={goToPreviousTable}
 							/>
 							<ChevronRightOutline
 								strokeWidth="1"
 								size="xs"
 								role="button"
-								class="text-red-800 absolute top-1/2 right-2.5 z-50"
+								class="text-emerald-800 absolute top-1/2 right-2.5 z-50"
 								on:click={goToNextTable}
 							/>
 						{/if}
@@ -169,7 +171,7 @@
 								<div class="awards-table basis-full shrink-0 mt-2">
 									<div class="flex justify-center">
 										<div class="table-container">
-											<span class="text-red-800 font-medium text-xl">{table.title}</span>
+											<span class="text-emerald-800 font-medium text-xl">{table.title}</span>
 											<div class="prize-list mt-3 px-3">
 												{#each table.items as item}
 													<div class="grid grid-cols-7 gap-x-2 md:gap-x-10">
@@ -192,7 +194,7 @@
 			{/if}
 		</section>
 		<section class="details mb-8">
-			<h4 class="font-medium text-3xl text-red-800 mb-2">Details</h4>
+			<h4 class="font-medium text-3xl text-emerald-800 mb-2">Details</h4>
 			<hr />
 			<div class="mt-5 ml-10 md:ml-14">
 				<ul class="list-disc list-outside">
@@ -204,7 +206,7 @@
 			</div>
 		</section>
 		<section class="application mb-6">
-			<h4 class="font-medium text-3xl text-red-800 mb-2">Application</h4>
+			<h4 class="font-medium text-3xl text-emerald-800 mb-2">Application</h4>
 			<hr />
 			<div class="mt-5 ml-10 md:ml-14">
 				<ul class="list-disc list-outside">
@@ -216,7 +218,7 @@
 			</div>
 		</section>
 		<Button
-			class="bg-red-800 w-7/12 hover:bg-red-900 focus:ring-0 md:ml-3 md:w-4/12 lg:w-3/12 lg:ml-2"
+			class="bg-emerald-800 w-7/12 hover:bg-emerald-900 focus:ring-0 md:ml-3 md:w-4/12 lg:w-3/12 lg:ml-2"
 			href={data.scholarship.url}
 			target="_blank"
 			rel="noopener noreferrer">Apply for scholarship</Button
